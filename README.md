@@ -2,7 +2,7 @@
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-red)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![AUC](https://img.shields.io/badge/AUC-0.798-orange)
+![AUC](https://img.shields.io/badge/AUC-0.7976-orange)
 
 
 一个基于PyTorch Geometric的图神经网络项目，用于维基百科链接图的链路预测任务。
