@@ -1,0 +1,2 @@
+data/processed/pyg_format/wiki_graph_data.pt filter=lfs diff=lfs merge=lfs -text
+data/raw/** filter=lfs diff=lfs merge=lfs -text

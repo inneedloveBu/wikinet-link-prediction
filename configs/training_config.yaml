@@ -1,0 +1,36 @@
+# 创建 configs/training_config.yaml
+# cat > configs/training_config.yaml << 'EOF'
+# 训练配置
+dataset:
+  name: "wiki_topcats"
+  path: "data/processed/pyg_format"
+  use_small: false  # 是否使用小数据集进行快速实验
+
+model:
+  type: "gcn"  # gcn, gat, sage
+  in_channels: 128  # 输入特征维度
+  hidden_channels: 256
+  out_channels: 128
+  num_heads: 4  # 用于GAT
+  dropout: 0.3
+
+training:
+  epochs: 100
+  patience: 15  # 早停耐心值
+  batch_size: null  # 全图训练，不使用批次
+  learning_rate: 0.001
+  weight_decay: 5e-4
+  num_neg_samples: 1  # 每个正样本的负样本数
+
+evaluation:
+  metrics: ["auc_roc", "average_precision"]
+  k_values: [10, 50, 100]  # 用于计算Hit@K
+
+logging:
+  log_dir: "logs"
+  save_checkpoints: true
+  checkpoint_freq: 5  # 每5轮保存一次
+  tensorboard: false
+
+device: "cuda"  # 或 "cpu"
+seed: 42

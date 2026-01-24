@@ -1,0 +1,702 @@
+清洗后的边数据 (共700条边)
+================================================================================
+1. 624	Alaska	105701	Chevak <->  Alaska
+2. 624	Alaska	105701	Chevak <-> 624	Alaska	105636	Deltana
+3. 624	Alaska	105701	Chevak <-> 624	Alaska	105635	Delta Junction
+4. 624	Alaska	105701	Chevak <-> 624	Alaska	105496	Ketchikan
+5. 624	Alaska	105701	Chevak <-> 624	Alaska	105248	Kipnuk
+6. 624	Alaska	105701	Chevak <-> 624	Alaska	105470	Halibut Cove
+7. 624	Alaska	105701	Chevak <-> 624	Alaska	105751	Nenana
+8. 624	Alaska	105701	Chevak <-> 624	Alaska	105488	Salamatof
+9. 624	Alaska	105701	Chevak <-> 624	Alaska	105491	Seward
+10. 624	Alaska	105701	Chevak <-> 624	Alaska	105557	Willow
+11. 624	Alaska	105701	Chevak <-> 624	Alaska	105531	Big Lake
+12. 624	Alaska	105701	Chevak <-> 624	Alaska	105204	King Cove
+13. 624	Alaska	105701	Chevak <-> 624	Alaska	105468	Fritz Creek
+14. 624	Alaska	105488	Salamatof <->  Alaska
+15. 624	Alaska	105488	Salamatof <-> 624	Alaska	105204	King Cove
+16. 624	Alaska	105488	Salamatof <-> 624	Alaska	105596	Noorvik
+17. 624	Alaska	105488	Salamatof <-> 624	Alaska	105484	Ninilchik
+18. 624	Alaska	105488	Salamatof <-> 624	Alaska	105563	Gambell
+19. 624	Alaska	105488	Salamatof <-> 624	Alaska	105293	Healy
+20. 624	Alaska	105488	Salamatof <-> 624	Alaska	105633	Big Delta
+21. 624	Alaska	105488	Salamatof <-> 624	Alaska	105469	Funny River
+22. 624	Alaska	105488	Salamatof <-> 624	Alaska	105201	Akutan
+23. 624	Alaska	105488	Salamatof <-> 624	Alaska	105455	Haines
+24. 624	Alaska	105488	Salamatof <-> 624	Alaska	42264158	Chena Ridge
+25. 624	Alaska	105488	Salamatof <-> 624	Alaska	105605	Hyder
+26. 624	Alaska	105263	Kwethluk <->  Alaska
+27. 624	Alaska	105263	Kwethluk <-> 624	Alaska	105635	Delta Junction
+28. 624	Alaska	105263	Kwethluk <-> 624	Alaska	105703	Hooper Bay
+29. 624	Alaska	105263	Kwethluk <-> 624	Alaska	105751	Nenana
+30. 624	Alaska	105263	Kwethluk <-> 624	Alaska	105497	Saxman
+31. 624	Alaska	105263	Kwethluk <-> 624	Alaska	41275006	Farmers Loop
+32. 624	Alaska	105263	Kwethluk <-> 624	Alaska	105487	Ridgeway
+33. 624	Alaska	105263	Kwethluk <-> 624	Alaska	105698	Whittier
+34. 624	Alaska	105263	Kwethluk <-> 624	Alaska	105594	Kotzebue
+35. 624	Alaska	105263	Kwethluk <-> 624	Alaska	105633	Big Delta
+36. 624	Alaska	105263	Kwethluk <-> 624	Alaska	105738	Galena
+37. 624	Alaska	105263	Kwethluk <-> 624	Alaska	105649	Tok
+38. 624	Alaska	105566	Nome <->  Alaska
+39. 624	Alaska	42262665	Badger <->  Alaska
+40. 624	Alaska	42262665	Badger <-> 624	Alaska	105278	Quinhagak
+41. 624	Alaska	42262665	Badger <-> 624	Alaska	105574	Unalakleet
+42. 624	Alaska	42262665	Badger <-> 624	Alaska	105542	Knik-Fairview
+43. 624	Alaska	105568	Savoonga <->  Alaska
+44. 624	Alaska	105547	Palmer <->  Alaska
+45. 624	Alaska	105547	Palmer <-> 624	Alaska	105460	Bear Creek
+46. 624	Alaska	105547	Palmer <-> 624	Alaska	20266776	Prospect Creek
+47. 624	Alaska	105547	Palmer <-> 624	Alaska	105636	Deltana
+48. 624	Alaska	105547	Palmer <-> 624	Alaska	105722	Wrangell
+49. 624	Alaska	105547	Palmer <-> 624	Alaska	105531	Big Lake
+50. 624	Alaska	105547	Palmer <-> 624	Alaska	105444	Ester
+51. 624	Alaska	105547	Palmer <-> 624	Alaska	105563	Gambell
+52. 624	Alaska	105547	Palmer <-> 624	Alaska	105236	Bethel
+53. 624	Alaska	105547	Palmer <-> 624	Alaska	105248	Kipnuk
+54. 624	Alaska	105547	Palmer <-> 624	Alaska	105635	Delta Junction
+55. 624	Alaska	105547	Palmer <-> 624	Alaska	44942919	Goldstream
+56. 624	Alaska	105547	Palmer <-> 624	Alaska	19420881	Wasilla
+57. 624	Alaska	105547	Palmer <-> 624	Alaska	105482	Nikiski
+58. 624	Alaska	105574	Unalakleet <->  Alaska
+59. 624	Alaska	105574	Unalakleet <-> 624	Alaska	105467	Fox River
+60. 624	Alaska	105574	Unalakleet <-> 624	Alaska	105493	Sterling
+61. 624	Alaska	105574	Unalakleet <-> 624	Alaska	105206	Sand Point
+62. 624	Alaska	105574	Unalakleet <-> 624	Alaska	105557	Willow
+63. 624	Alaska	105574	Unalakleet <-> 624	Alaska	105445	Fairbanks
+64. 624	Alaska	105574	Unalakleet <-> 624	Alaska	105487	Ridgeway
+65. 624	Alaska	105574	Unalakleet <-> 624	Alaska	105466	Diamond Ridge
+66. 624	Alaska	105574	Unalakleet <-> 624	Alaska	105542	Knik-Fairview
+67. 258	AnchorageAlaska	7004698	Anchorage <->  Alaska
+68. 258	AnchorageAlaska	7004698	Anchorage <-> 624	Alaska	105467	Fox River
+69. 624	Alaska	105482	Nikiski <->  Alaska
+70. 624	Alaska	105482	Nikiski <-> 624	Alaska	105455	Haines
+71. 624	Alaska	105482	Nikiski <-> 624	Alaska	105649	Tok
+72. 624	Alaska	105482	Nikiski <-> 624	Alaska	105736	Fort Yukon
+73. 624	Alaska	105482	Nikiski <-> 624	Alaska	105557	Willow
+74. 624	Alaska	105482	Nikiski <-> 624	Alaska	42264158	Chena Ridge
+75. 624	Alaska	105482	Nikiski <-> 624	Alaska	105596	Noorvik
+76. 624	Alaska	105469	Funny River <->  Alaska
+77. 624	Alaska	105469	Funny River <-> 624	Alaska	105444	Ester
+78. 624	Alaska	105469	Funny River <-> 624	Alaska	19420881	Wasilla
+79. 624	Alaska	105469	Funny River <-> 624	Alaska	105484	Ninilchik
+80. 624	Alaska	105469	Funny River <-> 624	Alaska	105493	Sterling
+81. 624	Alaska	105469	Funny River <-> 624	Alaska	105635	Delta Junction
+82. 624	Alaska	105469	Funny River <-> 624	Alaska	105596	Noorvik
+83. 624	Alaska	105469	Funny River <-> 624	Alaska	105710	Mountain Village
+84. 624	Alaska	105635	Delta Junction <->  Alaska
+85. 624	Alaska	105635	Delta Junction <-> 624	Alaska	105585	Prudhoe Bay
+86. 624	Alaska	105635	Delta Junction <-> 624	Alaska	105563	Gambell
+87. 624	Alaska	105635	Delta Junction <-> 624	Alaska	105594	Kotzebue
+88. 624	Alaska	105635	Delta Junction <-> 624	Alaska	44942919	Goldstream
+89. 624	Alaska	105635	Delta Junction <-> 624	Alaska	105293	Healy
+90. 624	Alaska	105635	Delta Junction <-> 624	Alaska	105542	Knik-Fairview
+91. 624	Alaska	105635	Delta Junction <-> 624	Alaska	19420881	Wasilla
+92. 624	Alaska	105635	Delta Junction <-> 624	Alaska	105204	King Cove
+93. 624	Alaska	105635	Delta Junction <-> 624	Alaska	105580	Barrow
+94. 624	Alaska	105635	Delta Junction <-> 624	Alaska	105496	Ketchikan
+95. 624	Alaska	105626	Hoonah <->  Alaska
+96. 624	Alaska	105626	Hoonah <-> 624	Alaska	105236	Bethel
+97. 624	Alaska	105626	Hoonah <-> 624	Alaska	105596	Noorvik
+98. 624	Alaska	105506	Kodiak Station <->  Alaska
+99. 624	Alaska	105506	Kodiak Station <-> 624	Alaska	105703	Hooper Bay
+100. 624	Alaska	105293	Healy <->  Alaska
+101. 624	Alaska	105293	Healy <-> 624	Alaska	105580	Barrow
+102. 624	Alaska	105293	Healy <-> 624	Alaska	41275006	Farmers Loop
+103. 624	Alaska	105293	Healy <-> 624	Alaska	105537	Fishhook
+104. 624	Alaska	105293	Healy <-> 624	Alaska	105204	King Cove
+105. 624	Alaska	105293	Healy <-> 624	Alaska	105497	Saxman
+106. 624	Alaska	105293	Healy <-> 624	Alaska	105563	Gambell
+107. 624	Alaska	105293	Healy <-> 624	Alaska	105722	Wrangell
+108. 624	Alaska	105293	Healy <-> 624	Alaska	105248	Kipnuk
+109. 624	Alaska	105293	Healy <-> 624	Alaska	105466	Diamond Ridge
+110. 624	Alaska	105293	Healy <-> 624	Alaska	105493	Sterling
+111. 624	Alaska	105293	Healy <-> 624	Alaska	105596	Noorvik
+112. 624	Alaska	105293	Healy <-> 624	Alaska	105533	Butte
+113. 624	Alaska	105293	Healy <-> 624	Alaska	105278	Quinhagak
+114. 624	Alaska	105293	Healy <-> 624	Alaska	105475	Kalifornsky
+115. 624	Alaska	105293	Healy <-> 624	Alaska	105487	Ridgeway
+116. 624	Alaska	105293	Healy <-> 624	Alaska	105649	Tok
+117. 624	Alaska	105293	Healy <-> 624	Alaska	105541	Knik River
+118. 624	Alaska	105293	Healy <-> 624	Alaska	105583	Point Hope
+119. 624	Alaska	105293	Healy <-> 624	Alaska	105455	Haines
+120. 624	Alaska	105293	Healy <-> 624	Alaska	105558	Susitna North
+121. 624	Alaska	105293	Healy <-> 624	Alaska	105442	College
+122. 624	Alaska	105293	Healy <-> 624	Alaska	105472	Homer
+123. 624	Alaska	105293	Healy <-> 624	Alaska	42264158	Chena Ridge
+124. 624	Alaska	105293	Healy <-> 624	Alaska	19420881	Wasilla
+125. 624	Alaska	105293	Healy <-> 624	Alaska	20266776	Prospect Creek
+126. 624	Alaska	105293	Healy <-> 624	Alaska	3260394	Women's Bay
+127. 624	Alaska	105293	Healy <-> 624	Alaska	105605	Hyder
+128. 624	Alaska	105293	Healy <-> 624	Alaska	105636	Deltana
+129. 624	Alaska	105293	Healy <-> 624	Alaska	105445	Fairbanks
+130. 624	Alaska	105293	Healy <-> 624	Alaska	105448	Moose Creek
+131. 624	Alaska	105278	Quinhagak <->  Alaska
+132. 624	Alaska	105278	Quinhagak <-> 624	Alaska	19420881	Wasilla
+133. 624	Alaska	105278	Quinhagak <-> 624	Alaska	105496	Ketchikan
+134. 624	Alaska	105278	Quinhagak <-> 624	Alaska	41275006	Farmers Loop
+135. 624	Alaska	105278	Quinhagak <-> 624	Alaska	105236	Bethel
+136. 624	Alaska	105278	Quinhagak <-> 624	Alaska	105702	Emmonak
+137. 624	Alaska	105278	Quinhagak <-> 624	Alaska	105710	Mountain Village
+138. 624	Alaska	105278	Quinhagak <-> 624	Alaska	105722	Wrangell
+139. 624	Alaska	105278	Quinhagak <-> 624	Alaska	105531	Big Lake
+140. 624	Alaska	105278	Quinhagak <-> 624	Alaska	105487	Ridgeway
+141. 624	Alaska	105278	Quinhagak <-> 624	Alaska	42264158	Chena Ridge
+142. 624	Alaska	105236	Bethel <->  Alaska
+143. 624	Alaska	105236	Bethel <-> 624	Alaska	105448	Moose Creek
+144. 624	Alaska	105236	Bethel <-> 624	Alaska	42264158	Chena Ridge
+145. 624	Alaska	105236	Bethel <-> 624	Alaska	3260394	Women's Bay
+146. 624	Alaska	105236	Bethel <-> 624	Alaska	105496	Ketchikan
+147. 624	Alaska	105236	Bethel <-> 624	Alaska	105542	Knik-Fairview
+148. 624	Alaska	105236	Bethel <-> 624	Alaska	105722	Wrangell
+149. 624	Alaska	105236	Bethel <-> 624	Alaska	105552	Sutton-Alpine
+150. 624	Alaska	105236	Bethel <-> 624	Alaska	105487	Ridgeway
+151. 624	Alaska	105236	Bethel <-> 624	Alaska	19420881	Wasilla
+152. 624	Alaska	105236	Bethel <-> 624	Alaska	105598	Selawik
+153. 624	Alaska	105236	Bethel <-> 624	Alaska	105697	Valdez
+154. 624	Alaska	105236	Bethel <-> 624	Alaska	87484	Northwest Arctic Borough
+155. 624	Alaska	105236	Bethel <-> 624	Alaska	105492	Soldotna
+156. 624	Alaska	105236	Bethel <-> 624	Alaska	105649	Tok
+157. 624	Alaska	105236	Bethel <-> 624	Alaska	105710	Mountain Village
+158. 624	Alaska	105236	Bethel <-> 624	Alaska	105596	Noorvik
+159. 624	Alaska	105236	Bethel <-> 624	Alaska	105636	Deltana
+160. 624	Alaska	105236	Bethel <-> 624	Alaska	105466	Diamond Ridge
+161. 624	Alaska	105236	Bethel <-> 624	Alaska	20266776	Prospect Creek
+162. 624	Alaska	105236	Bethel <-> 624	Alaska	105533	Butte
+163. 624	Alaska	105236	Bethel <-> 624	Alaska	105450	Pleasant Valley
+164. 624	Alaska	105236	Bethel <-> 624	Alaska	105538	Gateway
+165. 624	Alaska	105204	King Cove <->  Alaska
+166. 624	Alaska	105204	King Cove <-> 624	Alaska	42264158	Chena Ridge
+167. 624	Alaska	105204	King Cove <-> 624	Alaska	105444	Ester
+168. 624	Alaska	105204	King Cove <-> 624	Alaska	105487	Ridgeway
+169. 624	Alaska	105204	King Cove <-> 624	Alaska	105467	Fox River
+170. 624	Alaska	105204	King Cove <-> 624	Alaska	105484	Ninilchik
+171. 624	Alaska	105204	King Cove <-> 624	Alaska	19420881	Wasilla
+172. 624	Alaska	105204	King Cove <-> 624	Alaska	44942789	Steele Creek
+173. 624	Alaska	105204	King Cove <-> 624	Alaska	105442	College
+174. 624	Alaska	105204	King Cove <-> 624	Alaska	105629	Skagway
+175. 624	Alaska	105204	King Cove <-> 624	Alaska	105491	Seward
+176. 624	Alaska	105204	King Cove <-> 624	Alaska	105722	Wrangell
+177. 624	Alaska	105204	King Cove <-> 624	Alaska	105248	Kipnuk
+178. 624	Alaska	105532	Buffalo Soapstone <->  Alaska
+179. 624	Alaska	105532	Buffalo Soapstone <-> 624	Alaska	105472	Homer
+180. 624	Alaska	105452	Two Rivers <->  Alaska
+181. 624	Alaska	105452	Two Rivers <-> 624	Alaska	105554	Tanaina
+182. 624	Alaska	105452	Two Rivers <-> 624	Alaska	105596	Noorvik
+183. 624	Alaska	105452	Two Rivers <-> 624	Alaska	19420881	Wasilla
+184. 624	Alaska	105452	Two Rivers <-> 624	Alaska	105459	Anchor Point
+185. 624	Alaska	105452	Two Rivers <-> 624	Alaska	105636	Deltana
+186. 624	Alaska	105452	Two Rivers <-> 624	Alaska	105492	Soldotna
+187. 624	Alaska	105452	Two Rivers <-> 624	Alaska	105444	Ester
+188. 624	Alaska	105452	Two Rivers <-> 624	Alaska	105736	Fort Yukon
+189. 624	Alaska	105452	Two Rivers <-> 624	Alaska	41275006	Farmers Loop
+190. 624	Alaska	105452	Two Rivers <-> 624	Alaska	105442	College
+191. 624	Alaska	33554169	Portage <->  Alaska
+192. 624	Alaska	105633	Big Delta <->  Alaska
+193. 624	Alaska	105633	Big Delta <-> 624	Alaska	105697	Valdez
+194. 624	Alaska	105633	Big Delta <-> 624	Alaska	105442	College
+195. 624	Alaska	105633	Big Delta <-> 624	Alaska	105487	Ridgeway
+196. 624	Alaska	105633	Big Delta <-> 624	Alaska	105563	Gambell
+197. 624	Alaska	105633	Big Delta <-> 624	Alaska	105636	Deltana
+198. 624	Alaska	105633	Big Delta <-> 624	Alaska	105605	Hyder
+199. 624	Alaska	105633	Big Delta <-> 624	Alaska	105583	Point Hope
+200. 624	Alaska	105497	Saxman <->  Alaska
+201. 624	Alaska	105497	Saxman <-> 624	Alaska	19420881	Wasilla
+202. 624	Alaska	105497	Saxman <-> 624	Alaska	105442	College
+203. 624	Alaska	105497	Saxman <-> 624	Alaska	105444	Ester
+204. 624	Alaska	105497	Saxman <-> 624	Alaska	44942789	Steele Creek
+205. 624	Alaska	105497	Saxman <-> 624	Alaska	105605	Hyder
+206. 624	Alaska	105497	Saxman <-> 624	Alaska	105248	Kipnuk
+207. 624	Alaska	105497	Saxman <-> 624	Alaska	105487	Ridgeway
+208. 624	Alaska	105497	Saxman <-> 624	Alaska	105636	Deltana
+209. 624	Alaska	105497	Saxman <-> 624	Alaska	105484	Ninilchik
+210. 624	Alaska	105497	Saxman <-> 624	Alaska	105629	Skagway
+211. 624	Alaska	105497	Saxman <-> 624	Alaska	105583	Point Hope
+212. 624	Alaska	105497	Saxman <-> 624	Alaska	105607	Klawock
+213. 624	Alaska	105497	Saxman <-> 624	Alaska	105299	Dillingham
+214. 624	Alaska	105497	Saxman <-> 624	Alaska	105738	Galena
+215. 624	Alaska	105533	Butte <->  Alaska
+216. 624	Alaska	105533	Butte <-> 624	Alaska	105492	Soldotna
+217. 624	Alaska	105533	Butte <-> 624	Alaska	105601	Craig
+218. 624	Alaska	105533	Butte <-> 624	Alaska	42264158	Chena Ridge
+219. 624	Alaska	105533	Butte <-> 624	Alaska	105444	Ester
+220. 624	Alaska	105533	Butte <-> 624	Alaska	105248	Kipnuk
+221. 624	Alaska	105533	Butte <-> 624	Alaska	41275006	Farmers Loop
+222. 624	Alaska	105533	Butte <-> 624	Alaska	105580	Barrow
+223. 624	Alaska	105533	Butte <-> 624	Alaska	105305	Togiak
+224. 624	Alaska	105487	Ridgeway <->  Alaska
+225. 624	Alaska	105487	Ridgeway <-> 624	Alaska	105455	Haines
+226. 624	Alaska	105487	Ridgeway <-> 624	Alaska	105442	College
+227. 624	Alaska	105487	Ridgeway <-> 624	Alaska	41275006	Farmers Loop
+228. 624	Alaska	105487	Ridgeway <-> 624	Alaska	105299	Dillingham
+229. 624	Alaska	105487	Ridgeway <-> 624	Alaska	105563	Gambell
+230. 624	Alaska	105487	Ridgeway <-> 624	Alaska	105448	Moose Creek
+231. 624	Alaska	105487	Ridgeway <-> 624	Alaska	105557	Willow
+232. 624	Alaska	105487	Ridgeway <-> 624	Alaska	105536	Farm Loop
+233. 624	Alaska	105487	Ridgeway <-> 624	Alaska	105649	Tok
+234. 624	Alaska	105487	Ridgeway <-> 624	Alaska	105484	Ninilchik
+235. 624	Alaska	7004698	Anchorage <->  Alaska
+236. 624	Alaska	7004698	Anchorage <-> 624	Alaska	105649	Tok
+237. 624	Alaska	105463	Cohoe <->  Alaska
+238. 624	Alaska	105463	Cohoe <-> 624	Alaska	105629	Skagway
+239. 624	Alaska	105463	Cohoe <-> 624	Alaska	20266776	Prospect Creek
+240. 624	Alaska	105463	Cohoe <-> 624	Alaska	105468	Fritz Creek
+241. 624	Alaska	105463	Cohoe <-> 624	Alaska	41275006	Farmers Loop
+242. 624	Alaska	105299	Dillingham <->  Alaska
+243. 624	Alaska	105299	Dillingham <-> 624	Alaska	105544	Lakes
+244. 624	Alaska	105299	Dillingham <-> 624	Alaska	105751	Nenana
+245. 624	Alaska	105299	Dillingham <-> 624	Alaska	105444	Ester
+246. 624	Alaska	105299	Dillingham <-> 624	Alaska	105442	College
+247. 624	Alaska	105299	Dillingham <-> 624	Alaska	105557	Willow
+248. 624	Alaska	105299	Dillingham <-> 624	Alaska	105460	Bear Creek
+249. 624	Alaska	105299	Dillingham <-> 624	Alaska	41275006	Farmers Loop
+250. 624	Alaska	105299	Dillingham <-> 624	Alaska	105583	Point Hope
+251. 624	Alaska	105299	Dillingham <-> 624	Alaska	105649	Tok
+252. 624	Alaska	105299	Dillingham <-> 624	Alaska	105248	Kipnuk
+253. 624	Alaska	105299	Dillingham <-> 624	Alaska	105629	Skagway
+254. 624	Alaska	105299	Dillingham <-> 624	Alaska	105467	Fox River
+255. 624	Alaska	105299	Dillingham <-> 624	Alaska	105722	Wrangell
+256. 624	Alaska	105299	Dillingham <-> 624	Alaska	19420881	Wasilla
+257. 624	Alaska	105299	Dillingham <-> 624	Alaska	105455	Haines
+258. 624	Alaska	105299	Dillingham <-> 624	Alaska	105598	Selawik
+259. 624	Alaska	105596	Noorvik <->  Alaska
+260. 624	Alaska	105596	Noorvik <-> 624	Alaska	105466	Diamond Ridge
+261. 624	Alaska	105596	Noorvik <-> 624	Alaska	105557	Willow
+262. 624	Alaska	105596	Noorvik <-> 624	Alaska	105703	Hooper Bay
+263. 624	Alaska	105596	Noorvik <-> 624	Alaska	105607	Klawock
+264. 624	Alaska	105596	Noorvik <-> 624	Alaska	105545	Lazy Mountain
+265. 624	Alaska	105596	Noorvik <-> 624	Alaska	105722	Wrangell
+266. 624	Alaska	105596	Noorvik <-> 624	Alaska	105636	Deltana
+267. 624	Alaska	105596	Noorvik <-> 624	Alaska	105505	Kodiak
+268. 624	Alaska	105596	Noorvik <-> 624	Alaska	44942789	Steele Creek
+269. 624	Alaska	105596	Noorvik <-> 624	Alaska	105598	Selawik
+270. 624	Alaska	105596	Noorvik <-> 624	Alaska	3260394	Women's Bay
+271. 624	Alaska	105596	Noorvik <-> 624	Alaska	105601	Craig
+272. 624	Alaska	105596	Noorvik <-> 624	Alaska	20266776	Prospect Creek
+273. 624	Alaska	105596	Noorvik <-> 624	Alaska	105537	Fishhook
+274. 624	Alaska	105596	Noorvik <-> 624	Alaska	105751	Nenana
+275. 624	Alaska	105596	Noorvik <-> 624	Alaska	105554	Tanaina
+276. 624	Alaska	105596	Noorvik <-> 624	Alaska	105248	Kipnuk
+277. 624	Alaska	105596	Noorvik <-> 624	Alaska	19420881	Wasilla
+278. 624	Alaska	105596	Noorvik <-> 624	Alaska	105608	Metlakatla
+279. 624	Alaska	105596	Noorvik <-> 624	Alaska	105449	North Pole
+280. 624	Alaska	105596	Noorvik <-> 624	Alaska	105580	Barrow
+281. 624	Alaska	105596	Noorvik <-> 624	Alaska	105605	Hyder
+282. 624	Alaska	105596	Noorvik <-> 624	Alaska	105468	Fritz Creek
+283. 624	Alaska	105541	Knik River <->  Alaska
+284. 624	Alaska	105541	Knik River <-> 624	Alaska	2670584	Unorganized Borough
+285. 624	Alaska	105541	Knik River <-> 624	Alaska	105558	Susitna North
+286. 624	Alaska	105541	Knik River <-> 624	Alaska	105552	Sutton-Alpine
+287. 624	Alaska	105541	Knik River <-> 624	Alaska	105557	Willow
+288. 624	Alaska	105541	Knik River <-> 624	Alaska	105248	Kipnuk
+289. 624	Alaska	105541	Knik River <-> 624	Alaska	105444	Ester
+290. 624	Alaska	105541	Knik River <-> 624	Alaska	105459	Anchor Point
+291. 624	Alaska	105558	Susitna North <->  Alaska
+292. 624	Alaska	105558	Susitna North <-> 624	Alaska	105455	Haines
+293. 624	Alaska	105558	Susitna North <-> 624	Alaska	105636	Deltana
+294. 624	Alaska	105558	Susitna North <-> 624	Alaska	105710	Mountain Village
+295. 624	Alaska	105558	Susitna North <-> 624	Alaska	105545	Lazy Mountain
+296. 624	Alaska	105558	Susitna North <-> 624	Alaska	105248	Kipnuk
+297. 624	Alaska	105558	Susitna North <-> 624	Alaska	105629	Skagway
+298. 624	Alaska	105558	Susitna North <-> 624	Alaska	3260394	Women's Bay
+299. 624	Alaska	105558	Susitna North <-> 624	Alaska	105484	Ninilchik
+300. 624	Alaska	105698	Whittier <->  Alaska
+301. 624	Alaska	105698	Whittier <-> 624	Alaska	105629	Skagway
+302. 624	Alaska	105698	Whittier <-> 624	Alaska	105459	Anchor Point
+303. 624	Alaska	105450	Pleasant Valley <->  Alaska
+304. 624	Alaska	105450	Pleasant Valley <-> 624	Alaska	105710	Mountain Village
+305. 624	Alaska	105450	Pleasant Valley <-> 624	Alaska	105719	Petersburg
+306. 624	Alaska	105450	Pleasant Valley <-> 624	Alaska	3260394	Women's Bay
+307. 624	Alaska	105450	Pleasant Valley <-> 624	Alaska	105472	Homer
+308. 624	Alaska	105450	Pleasant Valley <-> 624	Alaska	105493	Sterling
+309. 624	Alaska	105450	Pleasant Valley <-> 624	Alaska	105248	Kipnuk
+310. 624	Alaska	105450	Pleasant Valley <-> 624	Alaska	105608	Metlakatla
+311. 624	Alaska	105450	Pleasant Valley <-> 624	Alaska	19420881	Wasilla
+312. 624	Alaska	105450	Pleasant Valley <-> 624	Alaska	105703	Hooper Bay
+313. 624	Alaska	105450	Pleasant Valley <-> 624	Alaska	105491	Seward
+314. 624	Alaska	105719	Petersburg <->  Alaska
+315. 624	Alaska	105719	Petersburg <-> 624	Alaska	44942919	Goldstream
+316. 624	Alaska	105719	Petersburg <-> 624	Alaska	105585	Prudhoe Bay
+317. 624	Alaska	105719	Petersburg <-> 624	Alaska	105545	Lazy Mountain
+318. 624	Alaska	105305	Togiak <->  Alaska
+319. 624	Alaska	105305	Togiak <-> 624	Alaska	105459	Anchor Point
+320. 624	Alaska	105305	Togiak <-> 624	Alaska	105444	Ester
+321. 624	Alaska	105305	Togiak <-> 624	Alaska	105455	Haines
+322. 624	Alaska	105305	Togiak <-> 624	Alaska	105563	Gambell
+323. 624	Alaska	105305	Togiak <-> 624	Alaska	105538	Gateway
+324. 624	Alaska	105305	Togiak <-> 624	Alaska	105607	Klawock
+325. 624	Alaska	105492	Soldotna <->  Alaska
+326. 624	Alaska	105492	Soldotna <-> 624	Alaska	105545	Lazy Mountain
+327. 624	Alaska	105492	Soldotna <-> 624	Alaska	105455	Haines
+328. 624	Alaska	105492	Soldotna <-> 624	Alaska	41275006	Farmers Loop
+329. 624	Alaska	105492	Soldotna <-> 624	Alaska	105445	Fairbanks
+330. 624	Alaska	105492	Soldotna <-> 624	Alaska	20266776	Prospect Creek
+331. 624	Alaska	105492	Soldotna <-> 624	Alaska	105442	College
+332. 624	Alaska	105492	Soldotna <-> 624	Alaska	105636	Deltana
+333. 624	Alaska	105492	Soldotna <-> 624	Alaska	105459	Anchor Point
+334. 624	Alaska	105492	Soldotna <-> 624	Alaska	105736	Fort Yukon
+335. 624	Alaska	105492	Soldotna <-> 624	Alaska	105751	Nenana
+336. 624	Alaska	105492	Soldotna <-> 624	Alaska	105649	Tok
+337. 624	Alaska	105492	Soldotna <-> 624	Alaska	105722	Wrangell
+338. 624	Alaska	105496	Ketchikan <->  Alaska
+339. 624	Alaska	105496	Ketchikan <-> 624	Alaska	105636	Deltana
+340. 624	Alaska	105496	Ketchikan <-> 624	Alaska	105201	Akutan
+341. 624	Alaska	105496	Ketchikan <-> 624	Alaska	105248	Kipnuk
+342. 624	Alaska	105496	Ketchikan <-> 624	Alaska	105703	Hooper Bay
+343. 624	Alaska	105496	Ketchikan <-> 624	Alaska	105545	Lazy Mountain
+344. 624	Alaska	105496	Ketchikan <-> 624	Alaska	20266776	Prospect Creek
+345. 624	Alaska	105496	Ketchikan <-> 624	Alaska	105467	Fox River
+346. 624	Alaska	105496	Ketchikan <-> 624	Alaska	105629	Skagway
+347. 624	Alaska	105496	Ketchikan <-> 624	Alaska	105702	Emmonak
+348. 624	Alaska	105496	Ketchikan <-> 624	Alaska	105580	Barrow
+349. 624	Alaska	105496	Ketchikan <-> 624	Alaska	105459	Anchor Point
+350. 624	Alaska	105496	Ketchikan <-> 624	Alaska	105710	Mountain Village
+351. 624	Alaska	105496	Ketchikan <-> 624	Alaska	105677	Cordova
+352. 624	Alaska	19420881	Wasilla <->  Alaska
+353. 624	Alaska	19420881	Wasilla <-> 624	Alaska	105636	Deltana
+354. 624	Alaska	19420881	Wasilla <-> 624	Alaska	105455	Haines
+355. 624	Alaska	19420881	Wasilla <-> 624	Alaska	105649	Tok
+356. 624	Alaska	19420881	Wasilla <-> 624	Alaska	105580	Barrow
+357. 624	Alaska	19420881	Wasilla <-> 624	Alaska	105449	North Pole
+358. 624	Alaska	19420881	Wasilla <-> 624	Alaska	105751	Nenana
+359. 624	Alaska	19420881	Wasilla <-> 624	Alaska	105557	Willow
+360. 624	Alaska	19420881	Wasilla <-> 624	Alaska	42264158	Chena Ridge
+361. 624	Alaska	19420881	Wasilla <-> 624	Alaska	105738	Galena
+362. 624	Alaska	19420881	Wasilla <-> 624	Alaska	105607	Klawock
+363. 624	Alaska	19420881	Wasilla <-> 624	Alaska	105710	Mountain Village
+364. 624	Alaska	19420881	Wasilla <-> 624	Alaska	105702	Emmonak
+365. 624	Alaska	105552	Sutton-Alpine <->  Alaska
+366. 624	Alaska	105552	Sutton-Alpine <-> 624	Alaska	105531	Big Lake
+367. 624	Alaska	105451	Salcha <->  Alaska
+368. 624	Alaska	105451	Salcha <-> 624	Alaska	105468	Fritz Creek
+369. 624	Alaska	105448	Moose Creek <->  Alaska
+370. 624	Alaska	105448	Moose Creek <-> 624	Alaska	105455	Haines
+371. 624	Alaska	105448	Moose Creek <-> 624	Alaska	105545	Lazy Mountain
+372. 624	Alaska	105448	Moose Creek <-> 624	Alaska	105468	Fritz Creek
+373. 624	Alaska	105448	Moose Creek <-> 624	Alaska	105697	Valdez
+374. 624	Alaska	105448	Moose Creek <-> 624	Alaska	105649	Tok
+375. 624	Alaska	105540	Houston <->  Alaska
+376. 624	Alaska	105540	Houston <-> 624	Alaska	42264158	Chena Ridge
+377. 624	Alaska	105540	Houston <-> 624	Alaska	105557	Willow
+378. 624	Alaska	105475	Kalifornsky <->  Alaska
+379. 624	Alaska	87484	Northwest Arctic Borough <->  Alaska
+380. 624	Alaska	105594	Kotzebue <->  Alaska
+381. 624	Alaska	105594	Kotzebue <-> 624	Alaska	105468	Fritz Creek
+382. 624	Alaska	105594	Kotzebue <-> 624	Alaska	105605	Hyder
+383. 624	Alaska	105594	Kotzebue <-> 624	Alaska	105585	Prudhoe Bay
+384. 624	Alaska	105594	Kotzebue <-> 624	Alaska	48126573	Islamic Community Center of Anchorage
+385. 624	Alaska	105594	Kotzebue <-> 624	Alaska	105455	Haines
+386. 624	Alaska	105594	Kotzebue <-> 624	Alaska	105751	Nenana
+387. 624	Alaska	105594	Kotzebue <-> 624	Alaska	105580	Barrow
+388. 624	Alaska	105594	Kotzebue <-> 624	Alaska	105248	Kipnuk
+389. 624	Alaska	105594	Kotzebue <-> 624	Alaska	44942919	Goldstream
+390. 624	Alaska	105594	Kotzebue <-> 624	Alaska	105206	Sand Point
+391. 624	Alaska	105594	Kotzebue <-> 624	Alaska	105467	Fox River
+392. 624	Alaska	105594	Kotzebue <-> 624	Alaska	42264158	Chena Ridge
+393. 624	Alaska	105594	Kotzebue <-> 624	Alaska	105722	Wrangell
+394. 624	Alaska	105493	Sterling <->  Alaska
+395. 624	Alaska	105493	Sterling <-> 624	Alaska	105442	College
+396. 624	Alaska	105493	Sterling <-> 624	Alaska	105703	Hooper Bay
+397. 624	Alaska	105493	Sterling <-> 624	Alaska	105583	Point Hope
+398. 624	Alaska	105493	Sterling <-> 624	Alaska	105563	Gambell
+399. 624	Alaska	105493	Sterling <-> 624	Alaska	44942919	Goldstream
+400. 624	Alaska	105493	Sterling <-> 624	Alaska	105455	Haines
+401. 624	Alaska	105493	Sterling <-> 624	Alaska	105484	Ninilchik
+402. 624	Alaska	105493	Sterling <-> 624	Alaska	105468	Fritz Creek
+403. 624	Alaska	105493	Sterling <-> 624	Alaska	105580	Barrow
+404. 624	Alaska	105493	Sterling <-> 624	Alaska	105557	Willow
+405. 624	Alaska	105493	Sterling <-> 624	Alaska	105449	North Pole
+406. 624	Alaska	105493	Sterling <-> 624	Alaska	105248	Kipnuk
+407. 624	Alaska	105493	Sterling <-> 624	Alaska	105751	Nenana
+408. 624	Alaska	105700	Alakanuk <->  Alaska
+409. 624	Alaska	105700	Alakanuk <-> 624	Alaska	105583	Point Hope
+410. 624	Alaska	105700	Alakanuk <-> 624	Alaska	105442	College
+411. 624	Alaska	105700	Alakanuk <-> 624	Alaska	105248	Kipnuk
+412. 624	Alaska	42264158	Chena Ridge <->  Alaska
+413. 624	Alaska	42264158	Chena Ridge <-> 624	Alaska	105542	Knik-Fairview
+414. 624	Alaska	42264158	Chena Ridge <-> 624	Alaska	105449	North Pole
+415. 624	Alaska	42264158	Chena Ridge <-> 624	Alaska	105703	Hooper Bay
+416. 624	Alaska	42264158	Chena Ridge <-> 624	Alaska	105585	Prudhoe Bay
+417. 624	Alaska	42264158	Chena Ridge <-> 624	Alaska	105563	Gambell
+418. 624	Alaska	42264158	Chena Ridge <-> 624	Alaska	105580	Barrow
+419. 624	Alaska	42264158	Chena Ridge <-> 624	Alaska	105444	Ester
+420. 624	Alaska	42264158	Chena Ridge <-> 624	Alaska	105607	Klawock
+421. 624	Alaska	42264158	Chena Ridge <-> 624	Alaska	105468	Fritz Creek
+422. 624	Alaska	42264158	Chena Ridge <-> 624	Alaska	105472	Homer
+423. 624	Alaska	42264158	Chena Ridge <-> 624	Alaska	105751	Nenana
+424. 624	Alaska	42264158	Chena Ridge <-> 624	Alaska	105536	Farm Loop
+425. 624	Alaska	42264158	Chena Ridge <-> 624	Alaska	105649	Tok
+426. 624	Alaska	42264158	Chena Ridge <-> 624	Alaska	105636	Deltana
+427. 624	Alaska	42264158	Chena Ridge <-> 624	Alaska	105455	Haines
+428. 624	Alaska	42264158	Chena Ridge <-> 624	Alaska	105738	Galena
+429. 624	Alaska	105459	Anchor Point <->  Alaska
+430. 624	Alaska	105459	Anchor Point <-> 624	Alaska	105605	Hyder
+431. 624	Alaska	105459	Anchor Point <-> 624	Alaska	44942789	Steele Creek
+432. 624	Alaska	105459	Anchor Point <-> 624	Alaska	105455	Haines
+433. 624	Alaska	105459	Anchor Point <-> 624	Alaska	44942919	Goldstream
+434. 624	Alaska	105459	Anchor Point <-> 624	Alaska	105248	Kipnuk
+435. 624	Alaska	105459	Anchor Point <-> 624	Alaska	105563	Gambell
+436. 624	Alaska	105459	Anchor Point <-> 624	Alaska	105751	Nenana
+437. 624	Alaska	105459	Anchor Point <-> 624	Alaska	105491	Seward
+438. 624	Alaska	105538	Gateway <->  Alaska
+439. 624	Alaska	105538	Gateway <-> 624	Alaska	105467	Fox River
+440. 624	Alaska	105538	Gateway <-> 624	Alaska	105248	Kipnuk
+441. 624	Alaska	105538	Gateway <-> 624	Alaska	105445	Fairbanks
+442. 624	Alaska	105538	Gateway <-> 624	Alaska	105585	Prudhoe Bay
+443. 624	Alaska	105538	Gateway <-> 624	Alaska	105554	Tanaina
+444. 624	Alaska	105538	Gateway <-> 624	Alaska	105703	Hooper Bay
+445. 624	Alaska	105538	Gateway <-> 624	Alaska	105455	Haines
+446. 624	Alaska	105629	Skagway <->  Alaska
+447. 624	Alaska	105629	Skagway <-> 624	Alaska	105442	College
+448. 624	Alaska	105629	Skagway <-> 624	Alaska	105505	Kodiak
+449. 624	Alaska	105629	Skagway <-> 624	Alaska	105215	Akiachak
+450. 624	Alaska	105629	Skagway <-> 624	Alaska	105557	Willow
+451. 624	Alaska	105629	Skagway <-> 624	Alaska	44942789	Steele Creek
+452. 624	Alaska	105629	Skagway <-> 624	Alaska	105531	Big Lake
+453. 624	Alaska	105629	Skagway <-> 624	Alaska	20266776	Prospect Creek
+454. 624	Alaska	105629	Skagway <-> 624	Alaska	105467	Fox River
+455. 624	Alaska	105629	Skagway <-> 624	Alaska	105545	Lazy Mountain
+456. 624	Alaska	105629	Skagway <-> 624	Alaska	105484	Ninilchik
+457. 624	Alaska	41275006	Farmers Loop <->  Alaska
+458. 624	Alaska	41275006	Farmers Loop <-> 624	Alaska	105563	Gambell
+459. 624	Alaska	41275006	Farmers Loop <-> 624	Alaska	105649	Tok
+460. 624	Alaska	41275006	Farmers Loop <-> 624	Alaska	105636	Deltana
+461. 624	Alaska	41275006	Farmers Loop <-> 624	Alaska	105583	Point Hope
+462. 624	Alaska	41275006	Farmers Loop <-> 624	Alaska	105542	Knik-Fairview
+463. 624	Alaska	41275006	Farmers Loop <-> 624	Alaska	105248	Kipnuk
+464. 624	Alaska	41275006	Farmers Loop <-> 624	Alaska	20266776	Prospect Creek
+465. 624	Alaska	41275006	Farmers Loop <-> 624	Alaska	105751	Nenana
+466. 624	Alaska	41275006	Farmers Loop <-> 624	Alaska	105607	Klawock
+467. 624	Alaska	105248	Kipnuk <->  Alaska
+468. 624	Alaska	105248	Kipnuk <-> 624	Alaska	105554	Tanaina
+469. 624	Alaska	105248	Kipnuk <-> 624	Alaska	105544	Lakes
+470. 624	Alaska	105248	Kipnuk <-> 624	Alaska	44942789	Steele Creek
+471. 624	Alaska	105248	Kipnuk <-> 624	Alaska	105445	Fairbanks
+472. 624	Alaska	105248	Kipnuk <-> 624	Alaska	105636	Deltana
+473. 624	Alaska	105248	Kipnuk <-> 624	Alaska	105605	Hyder
+474. 624	Alaska	105248	Kipnuk <-> 624	Alaska	105484	Ninilchik
+475. 624	Alaska	105248	Kipnuk <-> 624	Alaska	105738	Galena
+476. 624	Alaska	105248	Kipnuk <-> 624	Alaska	105608	Metlakatla
+477. 624	Alaska	105248	Kipnuk <-> 624	Alaska	105449	North Pole
+478. 624	Alaska	105248	Kipnuk <-> 624	Alaska	105206	Sand Point
+479. 624	Alaska	105248	Kipnuk <-> 624	Alaska	105649	Tok
+480. 624	Alaska	105248	Kipnuk <-> 624	Alaska	105557	Willow
+481. 624	Alaska	105248	Kipnuk <-> 624	Alaska	105442	College
+482. 624	Alaska	105248	Kipnuk <-> 624	Alaska	105546	Meadow Lakes
+483. 624	Alaska	105248	Kipnuk <-> 624	Alaska	105585	Prudhoe Bay
+484. 624	Alaska	105248	Kipnuk <-> 624	Alaska	105477	Kenai
+485. 624	Alaska	105248	Kipnuk <-> 624	Alaska	105580	Barrow
+486. 624	Alaska	105248	Kipnuk <-> 624	Alaska	20266776	Prospect Creek
+487. 624	Alaska	105248	Kipnuk <-> 624	Alaska	105491	Seward
+488. 624	Alaska	105542	Knik-Fairview <->  Alaska
+489. 624	Alaska	105542	Knik-Fairview <-> 624	Alaska	105455	Haines
+490. 624	Alaska	105542	Knik-Fairview <-> 624	Alaska	105722	Wrangell
+491. 624	Alaska	105542	Knik-Fairview <-> 624	Alaska	105697	Valdez
+492. 624	Alaska	105542	Knik-Fairview <-> 624	Alaska	105471	Happy Valley
+493. 624	Alaska	105542	Knik-Fairview <-> 624	Alaska	105444	Ester
+494. 624	Alaska	105542	Knik-Fairview <-> 624	Alaska	105738	Galena
+495. 624	Alaska	105542	Knik-Fairview <-> 624	Alaska	105466	Diamond Ridge
+496. 624	Alaska	44942789	Steele Creek <->  Alaska
+497. 624	Alaska	44942789	Steele Creek <-> 624	Alaska	105585	Prudhoe Bay
+498. 624	Alaska	44942789	Steele Creek <-> 624	Alaska	105557	Willow
+499. 624	Alaska	44942789	Steele Creek <-> 624	Alaska	105554	Tanaina
+500. 624	Alaska	44942789	Steele Creek <-> 624	Alaska	105468	Fritz Creek
+501. 624	Alaska	44942789	Steele Creek <-> 624	Alaska	105607	Klawock
+502. 624	Alaska	105467	Fox River <->  Alaska
+503. 624	Alaska	105467	Fox River <-> 624	Alaska	105636	Deltana
+504. 624	Alaska	105467	Fox River <-> 624	Alaska	105536	Farm Loop
+505. 624	Alaska	105467	Fox River <-> 624	Alaska	105697	Valdez
+506. 624	Alaska	105601	Craig <->  Alaska
+507. 624	Alaska	105601	Craig <-> 624	Alaska	105531	Big Lake
+508. 624	Alaska	105601	Craig <-> 624	Alaska	105583	Point Hope
+509. 624	Alaska	105605	Hyder <->  Alaska
+510. 624	Alaska	105605	Hyder <-> 624	Alaska	105580	Barrow
+511. 624	Alaska	105605	Hyder <-> 624	Alaska	105442	College
+512. 624	Alaska	105605	Hyder <-> 624	Alaska	20266776	Prospect Creek
+513. 624	Alaska	105605	Hyder <-> 624	Alaska	105536	Farm Loop
+514. 624	Alaska	105605	Hyder <-> 624	Alaska	105484	Ninilchik
+515. 624	Alaska	105605	Hyder <-> 624	Alaska	105468	Fritz Creek
+516. 624	Alaska	105605	Hyder <-> 624	Alaska	105455	Haines
+517. 624	Alaska	105605	Hyder <-> 624	Alaska	105703	Hooper Bay
+518. 624	Alaska	105605	Hyder <-> 624	Alaska	105466	Diamond Ridge
+519. 624	Alaska	105722	Wrangell <->  Alaska
+520. 624	Alaska	105722	Wrangell <-> 624	Alaska	105545	Lazy Mountain
+521. 624	Alaska	105722	Wrangell <-> 624	Alaska	105636	Deltana
+522. 624	Alaska	105722	Wrangell <-> 624	Alaska	105703	Hooper Bay
+523. 624	Alaska	105722	Wrangell <-> 624	Alaska	105455	Haines
+524. 624	Alaska	105722	Wrangell <-> 624	Alaska	105702	Emmonak
+525. 624	Alaska	105722	Wrangell <-> 624	Alaska	105468	Fritz Creek
+526. 624	Alaska	105722	Wrangell <-> 624	Alaska	105598	Selawik
+527. 624	Alaska	105477	Kenai <->  Alaska
+528. 624	Alaska	105477	Kenai <-> 624	Alaska	105442	College
+529. 624	Alaska	105531	Big Lake <->  Alaska
+530. 624	Alaska	105531	Big Lake <-> 624	Alaska	105563	Gambell
+531. 624	Alaska	105531	Big Lake <-> 624	Alaska	3260394	Women's Bay
+532. 624	Alaska	105531	Big Lake <-> 624	Alaska	105557	Willow
+533. 624	Alaska	105531	Big Lake <-> 624	Alaska	44942919	Goldstream
+534. 624	Alaska	105531	Big Lake <-> 624	Alaska	105636	Deltana
+535. 624	Alaska	105531	Big Lake <-> 624	Alaska	105442	College
+536. 624	Alaska	105544	Lakes <->  Alaska
+537. 624	Alaska	105460	Bear Creek <->  Alaska
+538. 624	Alaska	105460	Bear Creek <-> 624	Alaska	105442	College
+539. 624	Alaska	105460	Bear Creek <-> 624	Alaska	105484	Ninilchik
+540. 624	Alaska	105460	Bear Creek <-> 624	Alaska	105710	Mountain Village
+541. 624	Alaska	105738	Galena <->  Alaska
+542. 624	Alaska	105738	Galena <-> 624	Alaska	105442	College
+543. 624	Alaska	105738	Galena <-> 624	Alaska	105751	Nenana
+544. 624	Alaska	105738	Galena <-> 624	Alaska	105445	Fairbanks
+545. 624	Alaska	44942919	Goldstream <->  Alaska
+546. 624	Alaska	44942919	Goldstream <-> 624	Alaska	105472	Homer
+547. 624	Alaska	44942919	Goldstream <-> 624	Alaska	105607	Klawock
+548. 624	Alaska	44942919	Goldstream <-> 624	Alaska	105557	Willow
+549. 624	Alaska	44942919	Goldstream <-> 624	Alaska	105445	Fairbanks
+550. 624	Alaska	105445	Fairbanks <->  Alaska
+551. 624	Alaska	105445	Fairbanks <-> 624	Alaska	105546	Meadow Lakes
+552. 624	Alaska	105445	Fairbanks <-> 624	Alaska	105751	Nenana
+553. 624	Alaska	105445	Fairbanks <-> 624	Alaska	105468	Fritz Creek
+554. 624	Alaska	105445	Fairbanks <-> 624	Alaska	105697	Valdez
+555. 624	Alaska	105445	Fairbanks <-> 624	Alaska	105585	Prudhoe Bay
+556. 624	Alaska	105545	Lazy Mountain <->  Alaska
+557. 624	Alaska	105545	Lazy Mountain <-> 624	Alaska	105537	Fishhook
+558. 624	Alaska	105545	Lazy Mountain <-> 624	Alaska	105557	Willow
+559. 624	Alaska	105545	Lazy Mountain <-> 624	Alaska	105455	Haines
+560. 624	Alaska	105598	Selawik <->  Alaska
+561. 624	Alaska	105598	Selawik <-> 624	Alaska	105442	College
+562. 624	Alaska	105598	Selawik <-> 624	Alaska	105468	Fritz Creek
+563. 624	Alaska	105598	Selawik <-> 624	Alaska	105636	Deltana
+564. 624	Alaska	105598	Selawik <-> 624	Alaska	105455	Haines
+565. 624	Alaska	105598	Selawik <-> 624	Alaska	105585	Prudhoe Bay
+566. 624	Alaska	105471	Happy Valley <->  Alaska
+567. 624	Alaska	105471	Happy Valley <-> 624	Alaska	105557	Willow
+568. 624	Alaska	105471	Happy Valley <-> 624	Alaska	105751	Nenana
+569. 624	Alaska	105471	Happy Valley <-> 624	Alaska	105472	Homer
+570. 624	Alaska	105636	Deltana <->  Alaska
+571. 624	Alaska	105636	Deltana <-> 624	Alaska	105505	Kodiak
+572. 624	Alaska	105636	Deltana <-> 624	Alaska	105442	College
+573. 624	Alaska	105636	Deltana <-> 624	Alaska	105449	North Pole
+574. 624	Alaska	105636	Deltana <-> 624	Alaska	105554	Tanaina
+575. 624	Alaska	105636	Deltana <-> 624	Alaska	105585	Prudhoe Bay
+576. 624	Alaska	105636	Deltana <-> 624	Alaska	105215	Akiachak
+577. 624	Alaska	105636	Deltana <-> 624	Alaska	105607	Klawock
+578. 624	Alaska	105636	Deltana <-> 624	Alaska	105455	Haines
+579. 624	Alaska	105636	Deltana <-> 624	Alaska	105557	Willow
+580. 624	Alaska	3260394	Women's Bay <->  Alaska
+581. 624	Alaska	3260394	Women's Bay <-> 624	Alaska	105442	College
+582. 624	Alaska	3260394	Women's Bay <-> 624	Alaska	105455	Haines
+583. 624	Alaska	3260394	Women's Bay <-> 624	Alaska	105536	Farm Loop
+584. 624	Alaska	3260394	Women's Bay <-> 624	Alaska	105649	Tok
+585. 624	Alaska	105563	Gambell <->  Alaska
+586. 624	Alaska	105563	Gambell <-> 624	Alaska	105703	Hooper Bay
+587. 624	Alaska	105563	Gambell <-> 624	Alaska	105649	Tok
+588. 624	Alaska	105563	Gambell <-> 624	Alaska	105557	Willow
+589. 624	Alaska	105563	Gambell <-> 624	Alaska	105491	Seward
+590. 624	Alaska	105201	Akutan <->  Alaska
+591. 624	Alaska	105201	Akutan <-> 624	Alaska	105710	Mountain Village
+592. 624	Alaska	87475	Kodiak Island Borough <->  Alaska
+593. 624	Alaska	105537	Fishhook <->  Alaska
+594. 624	Alaska	105537	Fishhook <-> 624	Alaska	105703	Hooper Bay
+595. 624	Alaska	105472	Homer <->  Alaska
+596. 624	Alaska	105472	Homer <-> 624	Alaska	105702	Emmonak
+597. 624	Alaska	105468	Fritz Creek <->  Alaska
+598. 624	Alaska	105468	Fritz Creek <-> 624	Alaska	105607	Klawock
+599. 624	Alaska	105468	Fritz Creek <-> 624	Alaska	105703	Hooper Bay
+600. 624	Alaska	105468	Fritz Creek <-> 624	Alaska	105557	Willow
+601. 624	Alaska	105468	Fritz Creek <-> 624	Alaska	105649	Tok
+602. 624	Alaska	105468	Fritz Creek <-> 624	Alaska	105455	Haines
+603. 624	Alaska	105468	Fritz Creek <-> 624	Alaska	105585	Prudhoe Bay
+604. 624	Alaska	105608	Metlakatla <->  Alaska
+605. 624	Alaska	105206	Sand Point <->  Alaska
+606. 624	Alaska	105710	Mountain Village <->  Alaska
+607. 624	Alaska	105710	Mountain Village <-> 624	Alaska	105649	Tok
+608. 624	Alaska	105710	Mountain Village <-> 624	Alaska	105585	Prudhoe Bay
+609. 624	Alaska	105710	Mountain Village <-> 624	Alaska	105491	Seward
+610. 624	Alaska	20266776	Prospect Creek <->  Alaska
+611. 624	Alaska	20266776	Prospect Creek <-> 624	Alaska	105536	Farm Loop
+612. 624	Alaska	20266776	Prospect Creek <-> 624	Alaska	105444	Ester
+613. 624	Alaska	20266776	Prospect Creek <-> 624	Alaska	105442	College
+614. 624	Alaska	20266776	Prospect Creek <-> 624	Alaska	105649	Tok
+615. 624	Alaska	20266776	Prospect Creek <-> 624	Alaska	105697	Valdez
+616.  Alaska <-> 624	Alaska	105215	Akiachak
+617.  Alaska <-> 624	Alaska	105580	Barrow
+618.  Alaska <-> 624	Alaska	105442	College
+619.  Alaska <-> 624	Alaska	105677	Cordova
+620.  Alaska <-> 624	Alaska	105466	Diamond Ridge
+621.  Alaska <-> 624	Alaska	105702	Emmonak
+622.  Alaska <-> 624	Alaska	105444	Ester
+623.  Alaska <-> 624	Alaska	105536	Farm Loop
+624.  Alaska <-> 624	Alaska	105736	Fort Yukon
+625.  Alaska <-> 624	Alaska	105455	Haines
+626.  Alaska <-> 624	Alaska	105470	Halibut Cove
+627.  Alaska <-> 624	Alaska	105703	Hooper Bay
+628.  Alaska <-> 624	Alaska	48126573	Islamic Community Center of Anchorage
+629.  Alaska <-> 624	Alaska	87469	Juneau
+630.  Alaska <-> 624	Alaska	105607	Klawock
+631.  Alaska <-> 624	Alaska	105505	Kodiak
+632.  Alaska <-> 624	Alaska	105546	Meadow Lakes
+633.  Alaska <-> 624	Alaska	105751	Nenana
+634.  Alaska <-> 624	Alaska	105484	Ninilchik
+635.  Alaska <-> 624	Alaska	105449	North Pole
+636.  Alaska <-> 624	Alaska	105583	Point Hope
+637.  Alaska <-> 624	Alaska	105585	Prudhoe Bay
+638.  Alaska <-> 624	Alaska	105491	Seward
+639.  Alaska <-> 624	Alaska	87486	Sitka
+640.  Alaska <-> 624	Alaska	105553	Talkeetna
+641.  Alaska <-> 624	Alaska	105554	Tanaina
+642.  Alaska <-> 624	Alaska	105649	Tok
+643.  Alaska <-> 624	Alaska	105213	Unalaska
+644.  Alaska <-> 624	Alaska	2670584	Unorganized Borough
+645.  Alaska <-> 624	Alaska	105697	Valdez
+646.  Alaska <-> 624	Alaska	105557	Willow
+647.  Alaska <-> 624	Alaska	87499	Yakutat
+648. 624	Alaska	105557	Willow <-> 624	Alaska	105536	Farm Loop
+649. 624	Alaska	105557	Willow <-> 624	Alaska	105444	Ester
+650. 624	Alaska	105557	Willow <-> 624	Alaska	105505	Kodiak
+651. 624	Alaska	105557	Willow <-> 624	Alaska	105455	Haines
+652. 624	Alaska	105557	Willow <-> 624	Alaska	105649	Tok
+653. 624	Alaska	105557	Willow <-> 624	Alaska	105546	Meadow Lakes
+654. 624	Alaska	105557	Willow <-> 624	Alaska	105442	College
+655. 624	Alaska	105536	Farm Loop <-> 624	Alaska	105444	Ester
+656. 624	Alaska	105536	Farm Loop <-> 624	Alaska	105649	Tok
+657. 624	Alaska	105751	Nenana <-> 624	Alaska	105702	Emmonak
+658. 624	Alaska	105751	Nenana <-> 624	Alaska	105585	Prudhoe Bay
+659. 624	Alaska	105751	Nenana <-> 624	Alaska	105215	Akiachak
+660. 624	Alaska	105751	Nenana <-> 624	Alaska	105491	Seward
+661. 624	Alaska	105751	Nenana <-> 624	Alaska	105703	Hooper Bay
+662. 624	Alaska	105751	Nenana <-> 624	Alaska	105442	College
+663. 624	Alaska	105470	Halibut Cove <-> 624	Alaska	105580	Barrow
+664. 624	Alaska	105677	Cordova <-> 624	Alaska	105444	Ester
+665. 624	Alaska	105546	Meadow Lakes <-> 624	Alaska	105442	College
+666. 624	Alaska	48126573	Islamic Community Center of Anchorage <-> 624	Alaska	105649	Tok
+667. 624	Alaska	105554	Tanaina <-> 624	Alaska	105442	College
+668. 624	Alaska	105554	Tanaina <-> 624	Alaska	105444	Ester
+669. 624	Alaska	105554	Tanaina <-> 624	Alaska	105491	Seward
+670. 624	Alaska	105484	Ninilchik <-> 624	Alaska	105449	North Pole
+671. 624	Alaska	105484	Ninilchik <-> 624	Alaska	105697	Valdez
+672. 624	Alaska	105484	Ninilchik <-> 624	Alaska	105442	College
+673. 624	Alaska	105466	Diamond Ridge <-> 624	Alaska	105585	Prudhoe Bay
+674. 624	Alaska	105466	Diamond Ridge <-> 624	Alaska	105505	Kodiak
+675. 624	Alaska	105697	Valdez <-> 624	Alaska	105607	Klawock
+676. 624	Alaska	105649	Tok <-> 624	Alaska	105444	Ester
+677. 624	Alaska	105649	Tok <-> 624	Alaska	105703	Hooper Bay
+678. 624	Alaska	105649	Tok <-> 624	Alaska	105585	Prudhoe Bay
+679. 624	Alaska	105649	Tok <-> 624	Alaska	105455	Haines
+680. 624	Alaska	105649	Tok <-> 624	Alaska	105580	Barrow
+681. 624	Alaska	105649	Tok <-> 624	Alaska	105491	Seward
+682. 624	Alaska	105215	Akiachak <-> 624	Alaska	105585	Prudhoe Bay
+683. 624	Alaska	105215	Akiachak <-> 624	Alaska	105455	Haines
+684. 624	Alaska	105607	Klawock <-> 624	Alaska	105585	Prudhoe Bay
+685. 624	Alaska	105607	Klawock <-> 624	Alaska	105703	Hooper Bay
+686. 624	Alaska	105607	Klawock <-> 624	Alaska	105491	Seward
+687. 624	Alaska	105607	Klawock <-> 624	Alaska	105442	College
+688. 624	Alaska	105607	Klawock <-> 624	Alaska	105449	North Pole
+689. 624	Alaska	105607	Klawock <-> 624	Alaska	105455	Haines
+690. 624	Alaska	105444	Ester <-> 624	Alaska	105583	Point Hope
+691. 624	Alaska	105444	Ester <-> 624	Alaska	105455	Haines
+692. 624	Alaska	105455	Haines <-> 624	Alaska	105449	North Pole
+693. 624	Alaska	105455	Haines <-> 624	Alaska	105583	Point Hope
+694. 624	Alaska	105455	Haines <-> 624	Alaska	87469	Juneau
+695. 624	Alaska	105455	Haines <-> 624	Alaska	105585	Prudhoe Bay
+696. 624	Alaska	105703	Hooper Bay <-> 624	Alaska	105442	College
+697. 624	Alaska	105583	Point Hope <-> 624	Alaska	105449	North Pole
+698. 624	Alaska	105585	Prudhoe Bay <-> 624	Alaska	105442	College
+699. 624	Alaska	105491	Seward <-> 624	Alaska	105442	College
+700. 624	Alaska	105580	Barrow <-> 624	Alaska	105442	College

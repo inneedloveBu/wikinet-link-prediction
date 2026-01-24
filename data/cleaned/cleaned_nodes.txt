@@ -1,0 +1,116 @@
+清洗后的节点数据 (共114个节点)
+================================================================================
+1. 624	Alaska	105701	Chevak
+2. 624	Alaska	105488	Salamatof
+3. 624	Alaska	105263	Kwethluk
+4. 624	Alaska	105566	Nome
+5. 624	Alaska	42262665	Badger
+6. 624	Alaska	105568	Savoonga
+7. 624	Alaska	105547	Palmer
+8. 624	Alaska	105574	Unalakleet
+9. 258	AnchorageAlaska	7004698	Anchorage
+10. 624	Alaska	105482	Nikiski
+11. 624	Alaska	105469	Funny River
+12. 624	Alaska	105635	Delta Junction
+13. 624	Alaska	105626	Hoonah
+14. 624	Alaska	105506	Kodiak Station
+15. 624	Alaska	105293	Healy
+16. 624	Alaska	105278	Quinhagak
+17. 624	Alaska	105236	Bethel
+18. 624	Alaska	105204	King Cove
+19. 624	Alaska	105532	Buffalo Soapstone
+20. 624	Alaska	105452	Two Rivers
+21. 624	Alaska	33554169	Portage
+22. 624	Alaska	105633	Big Delta
+23. 624	Alaska	105497	Saxman
+24. 624	Alaska	105533	Butte
+25. 624	Alaska	105487	Ridgeway
+26. 624	Alaska	7004698	Anchorage
+27. 624	Alaska	105463	Cohoe
+28. 624	Alaska	105299	Dillingham
+29. 624	Alaska	105596	Noorvik
+30. 624	Alaska	105541	Knik River
+31. 624	Alaska	105558	Susitna North
+32. 624	Alaska	105698	Whittier
+33. 624	Alaska	105450	Pleasant Valley
+34. 624	Alaska	105719	Petersburg
+35. 624	Alaska	105305	Togiak
+36. 624	Alaska	105492	Soldotna
+37. 624	Alaska	105496	Ketchikan
+38. 624	Alaska	19420881	Wasilla
+39. 624	Alaska	105552	Sutton-Alpine
+40. 624	Alaska	105451	Salcha
+41. 624	Alaska	105448	Moose Creek
+42. 624	Alaska	105540	Houston
+43. 624	Alaska	105475	Kalifornsky
+44. 624	Alaska	87484	Northwest Arctic Borough
+45. 624	Alaska	105594	Kotzebue
+46. 624	Alaska	105493	Sterling
+47. 624	Alaska	105700	Alakanuk
+48. 624	Alaska	42264158	Chena Ridge
+49. 624	Alaska	105459	Anchor Point
+50. 624	Alaska	105538	Gateway
+51. 624	Alaska	105629	Skagway
+52. 624	Alaska	41275006	Farmers Loop
+53. 624	Alaska	105248	Kipnuk
+54. 624	Alaska	105542	Knik-Fairview
+55. 624	Alaska	44942789	Steele Creek
+56. 624	Alaska	105467	Fox River
+57. 624	Alaska	105601	Craig
+58. 624	Alaska	105605	Hyder
+59. 624	Alaska	105722	Wrangell
+60. 624	Alaska	105477	Kenai
+61. 624	Alaska	105531	Big Lake
+62. 624	Alaska	105544	Lakes
+63. 624	Alaska	105460	Bear Creek
+64. 624	Alaska	105738	Galena
+65. 624	Alaska	44942919	Goldstream
+66. 624	Alaska	105445	Fairbanks
+67. 624	Alaska	105545	Lazy Mountain
+68. 624	Alaska	105598	Selawik
+69. 624	Alaska	105471	Happy Valley
+70. 624	Alaska	105636	Deltana
+71. 624	Alaska	3260394	Women's Bay
+72. 624	Alaska	105563	Gambell
+73. 624	Alaska	105201	Akutan
+74. 624	Alaska	87475	Kodiak Island Borough
+75. 624	Alaska	105537	Fishhook
+76. 624	Alaska	105472	Homer
+77. 624	Alaska	105468	Fritz Creek
+78. 624	Alaska	105608	Metlakatla
+79. 624	Alaska	105206	Sand Point
+80. 624	Alaska	105710	Mountain Village
+81. 624	Alaska	20266776	Prospect Creek
+82.  Alaska
+83. 624	Alaska	105557	Willow
+84. 624	Alaska	105536	Farm Loop
+85. 624	Alaska	105751	Nenana
+86. 624	Alaska	105470	Halibut Cove
+87. 624	Alaska	105677	Cordova
+88. 624	Alaska	105546	Meadow Lakes
+89. 624	Alaska	48126573	Islamic Community Center of Anchorage
+90. 624	Alaska	105554	Tanaina
+91. 624	Alaska	105484	Ninilchik
+92. 624	Alaska	105466	Diamond Ridge
+93. 624	Alaska	105697	Valdez
+94. 624	Alaska	105649	Tok
+95. 624	Alaska	105215	Akiachak
+96. 624	Alaska	105607	Klawock
+97. 624	Alaska	105444	Ester
+98. 624	Alaska	105455	Haines
+99. 624	Alaska	105703	Hooper Bay
+100. 624	Alaska	105583	Point Hope
+101. 624	Alaska	105585	Prudhoe Bay
+102. 624	Alaska	105491	Seward
+103. 624	Alaska	105580	Barrow
+104. 624	Alaska	105736	Fort Yukon
+105. 624	Alaska	105442	College
+106. 624	Alaska	105702	Emmonak
+107. 624	Alaska	105505	Kodiak
+108. 624	Alaska	105449	North Pole
+109. 624	Alaska	2670584	Unorganized Borough
+110. 624	Alaska	87469	Juneau
+111. 624	Alaska	87486	Sitka
+112. 624	Alaska	105553	Talkeetna
+113. 624	Alaska	105213	Unalaska
+114. 624	Alaska	87499	Yakutat

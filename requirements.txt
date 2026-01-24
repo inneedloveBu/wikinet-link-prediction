@@ -1,0 +1,24 @@
+# 1. 先安装基础依赖（这些包兼容性好）
+pandas>=2.0.3
+numpy>=1.24.3
+scikit-learn>=1.3.0
+matplotlib>=3.7.1
+seaborn>=0.12.2
+jupyter>=1.0.0
+tqdm>=4.65.0
+notebook>=6.5.4
+ipython>=8.14.0
+
+# 2. 图处理库
+networkx>=3.1
+
+# 3. Web应用框架（最后安装，因为依赖多）
+streamlit>=1.24.0
+
+# 4. 数据处理工具
+requests>=2.31.0
+beautifulsoup4>=4.12.2
+
+torch>=2.0.0
+torch-geometric>=2.4.0
+
