@@ -10,10 +10,15 @@
 ## 📊 实验结果与可视化
 下图展示了模型在训练过程中损失下降和AUC指标上升的趋势：
 <img src="https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_202601241600_final.gif" alt="训练过程动画" style="max-width: 100%; border: 1px solid #ddd;" />
-![训练过程动画（中文）](./animations/training_progress_chinese_202601241601_final.gif)
-![training process animation（English）](https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_202601241600_final.gif)
+https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_202601241600_final.gif
+![训练进度动图](https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_202601241600_final.gif)
+<img src="https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_chinese_202601241601_final.gif" width="50%" />
 
+### 训练过程动态展示
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_202601241600_final.gif" width="90%" alt="GNN训练进度">
+</div>
 
 一个基于PyTorch Geometric的图神经网络项目，用于维基百科链接图的链路预测任务。
 
