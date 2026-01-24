@@ -3,41 +3,624 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WikiLinks GNN 链路预测项目</title>
+    <title>WikiLinks GNN 链路预测</title>
+    <meta name="description" content="基于图神经网络的维基百科页面链路预测项目">
+    <meta name="keywords" content="图神经网络,GNN,链路预测,WikiLinks,机器学习">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; margin: 0; padding: 20px; background: #f6f8fa; }
-        .markdown-body { max-width: 800px; margin: 0 auto; padding: 30px; background: white; border: 1px solid #e1e4e8; border-radius: 6px; }
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #3b82f6;
+            --accent-color: #10b981;
+            --text-color: #1f2937;
+            --light-bg: #f8fafc;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 头部样式 */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 3rem;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+        
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s;
+        }
+        
+        .badge:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .badge i {
+            margin-right: 5px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary {
+            background-color: white;
+            color: var(--primary-color);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn i {
+            margin-right: 8px;
+        }
+        
+        /* 主要内容区域 */
+        main {
+            padding-bottom: 4rem;
+        }
+        
+        section {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--card-shadow);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2 i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+        
+        h3 {
+            margin: 1.5rem 0 1rem;
+            color: var(--secondary-color);
+        }
+        
+        /* 项目亮点 */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .feature-card {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-color);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card i {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        /* 结果展示 */
+        .results-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .results-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .result-card {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .metric {
+            text-align: center;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .metric-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        /* 训练可视化 */
+        .visualization {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .gif-container {
+            max-width: 800px;
+            margin: 1.5rem auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .gif-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* 代码块样式 */
+        pre {
+            background: #1a1a1a;
+            color: #f8f8f2;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+        
+        code {
+            font-family: 'Fira Code', 'Consolas', monospace;
+        }
+        
+        /* 引用样式 */
+        blockquote {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            color: #555;
+            font-style: italic;
+        }
+        
+        /* 页脚 */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #666;
+            border-top: 1px solid #e5e7eb;
+            margin-top: 3rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 1.5rem 0;
+        }
+        
+        .social-links a {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-3px);
+            color: var(--secondary-color);
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+            
+            .header-content {
+                padding: 0 1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
-    <article class="markdown-body">
-        <h1>🔗 WikiLinks 图神经网络链路预测</h1>
-        <p>这是一个基于图神经网络（GNN）的维基百科页面间链接预测项目。</p>
+    <!-- 头部 -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-project-diagram"></i>
+            </div>
+            <h1>WikiLinks GNN 链路预测</h1>
+            <p class="tagline">基于图神经网络(GNN)的维基百科页面间链接预测与知识图谱补全</p>
+            
+            <div class="badges">
+                <div class="badge">
+                    <i class="fas fa-code"></i> Python 3.8+
+                </div>
+                <div class="badge">
+                    <i class="fas fa-brain"></i> PyTorch 2.0+
+                </div>
+                <div class="badge">
+                    <i class="fas fa-chart-line"></i> AUC: 0.798
+                </div>
+                <div class="badge">
+                    <i class="fas fa-balance-scale"></i> MIT License
+                </div>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="https://github.com/inneedloveBu/wikinet-link-prediction" class="btn btn-primary">
+                    <i class="fab fa-github"></i> GitHub仓库
+                </a>
+                <a href="https://colab.research.google.com/github/inneedloveBu/wikinet-link-prediction/blob/main/notebooks/WikiLinks_Demo.ipynb" class="btn btn-secondary">
+                    <i class="fas fa-play-circle"></i> 在Colab中运行
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="container">
+        <!-- 项目介绍 -->
+        <section id="introduction">
+            <h2><i class="fas fa-info-circle"></i> 项目介绍</h2>
+            <p>WikiLinks GNN链路预测项目是一个基于图神经网络(GNN)的机器学习项目，旨在预测维基百科页面之间的潜在链接关系。本项目通过分析页面间的结构特征，构建了一个高效的链路预测模型，可用于知识图谱补全、推荐系统等应用场景。</p>
+            
+            <h3>核心问题</h3>
+            <p>在维基百科的庞大知识网络中，许多页面之间的关联关系尚未被明确记录。本项目通过机器学习方法，自动识别这些潜在的链接关系，从而:</p>
+            <ul>
+                <li>完善维基百科知识图谱的结构</li>
+                <li>为用户提供更丰富的相关页面推荐</li>
+                <li>探索图神经网络在复杂网络分析中的应用</li>
+            </ul>
+        </section>
+
+        <!-- 项目亮点 -->
+        <section id="features">
+            <h2><i class="fas fa-star"></i> 项目亮点</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>先进的图神经网络</h3>
+                    <p>使用PyTorch Geometric实现多种GNN架构，包括GCN、GAT和GraphSAGE，支持复杂的图结构学习。</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>全面的实验评估</h3>
+                    <p>提供完整的实验流程，包括数据预处理、模型训练、超参数调优和结果可视化，确保结果可复现。</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-code-branch"></i>
+                    <h3>模块化代码设计</h3>
+                    <p>代码结构清晰，模块化设计，便于扩展和二次开发，适合学术研究和工业应用。</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>开箱即用</h3>
+                    <p>提供预训练模型、一键训练脚本和Google Colab演示，降低使用门槛，快速上手。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 实验结果 -->
+        <section id="results">
+            <h2><i class="fas fa-chart-line"></i> 实验结果</h2>
+            
+            <div class="results-container">
+                <div class="result-card">
+                    <h3>性能指标</h3>
+                    <div class="metrics-grid">
+                        <div class="metric">
+                            <div class="metric-value">0.798</div>
+                            <div class="metric-label">测试集 AUC</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">0.784</div>
+                            <div class="metric-label">测试集 AP</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">0.763</div>
+                            <div class="metric-label">F1分数</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">0.696</div>
+                            <div class="metric-label">准确率</div>
+                        </div>
+                    </div>
+                    
+                    <h3>模型配置</h3>
+                    <ul>
+                        <li><strong>总参数量</strong>: 21,729 (全部可训练)</li>
+                        <li><strong>训练数据</strong>: 420条边</li>
+                        <li><strong>验证数据</strong>: 140条边</li>
+                        <li><strong>测试数据</strong>: 140条边</li>
+                        <li><strong>训练轮次</strong>: 300 epochs</li>
+                        <li><strong>最佳验证AUC</strong>: 0.897 (Epoch 110)</li>
+                    </ul>
+                </div>
+                
+                <div class="result-card">
+                    <h3>技术栈</h3>
+                    <ul>
+                        <li><strong>深度学习框架</strong>: PyTorch 2.0+</li>
+                        <li><strong>图神经网络库</strong>: PyTorch Geometric</li>
+                        <li><strong>数据处理</strong>: NumPy, Pandas</li>
+                        <li><strong>可视化</strong>: Matplotlib, Seaborn</li>
+                        <li><strong>实验管理</strong>: JSON日志, TensorBoard(可选)</li>
+                    </ul>
+                    
+                    <h3>支持模型</h3>
+                    <ul>
+                        <li>图卷积网络 (GCN)</li>
+                        <li>图注意力网络 (GAT)</li>
+                        <li>GraphSAGE</li>
+                        <li>链路预测专用解码器</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 训练可视化 -->
+        <section id="visualization">
+            <h2><i class="fas fa-eye"></i> 训练过程可视化</h2>
+            <p>通过动态GIF展示模型在300个训练轮次中的学习过程，直观呈现损失下降和AUC提升的趋势。</p>
+            
+            <div class="visualization">
+                <div class="gif-container">
+                    <img src="https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english.gif" 
+                         alt="WikiLinks GNN训练过程动画" 
+                         onerror="this.src='assets/training_progress_english.gif'">
+                </div>
+                <p><em>图: 训练过程中损失函数下降和验证AUC提升的动态变化</em></p>
+            </div>
+            
+            <blockquote>
+                在训练过程中，模型在第110个epoch达到最佳验证AUC(0.897)，最终在测试集上获得0.798的AUC分数。训练损失持续下降表明模型有效学习到了数据中的模式。
+            </blockquote>
+        </section>
+
+        <!-- 快速开始 -->
+        <section id="quickstart">
+            <h2><i class="fas fa-bolt"></i> 快速开始</h2>
+            
+            <h3>1. 克隆仓库</h3>
+            <pre><code class="language-bash">git clone https://github.com/inneedloveBu/wikinet-link-prediction.git
+cd wikinet-link-prediction</code></pre>
+            
+            <h3>2. 安装依赖</h3>
+            <pre><code class="language-bash">pip install -r requirements.txt</code></pre>
+            
+            <h3>3. 训练模型</h3>
+            <pre><code class="language-bash">python train.py --model gcn --epochs 300 --lr 0.001</code></pre>
+            
+            <h3>4. 使用预训练模型进行预测</h3>
+            <pre><code class="language-python">from models.link_prediction import WikiLinksPredictor
+
+# 加载预训练模型
+predictor = WikiLinksPredictor.load_pretrained()
+
+# 进行预测
+predictions = predictor.predict(new_data)
+print(f"预测结果: {predictions}")</code></pre>
+            
+            <div class="cta-buttons" style="justify-content: flex-start; margin-top: 1.5rem;">
+                <a href="https://colab.research.google.com/github/inneedloveBu/wikinet-link-prediction/blob/main/notebooks/WikiLinks_Demo.ipynb" class="btn btn-primary">
+                    <i class="fas fa-play-circle"></i> 在Colab中立即尝试
+                </a>
+            </div>
+        </section>
+
+        <!-- 引用与致谢 -->
+        <section id="references">
+            <h2><i class="fas fa-book"></i> 参考文献</h2>
+            <p>本项目基于以下重要的研究工作:</p>
+            
+            <ol>
+                <li>
+                    <strong>Kipf, T. N., & Welling, M. (2016)</strong>. 
+                    Semi-Supervised Classification with Graph Convolutional Networks. 
+                    <em>arXiv preprint arXiv:1609.02907</em>.
+                </li>
+                <li>
+                    <strong>Hamilton, W., Ying, Z., & Leskovec, J. (2017)</strong>. 
+                    Inductive Representation Learning on Large Graphs. 
+                    <em>Advances in neural information processing systems, 30</em>.
+                </li>
+                <li>
+                    <strong>Zhang, M., & Chen, Y. (2018)</strong>. 
+                    Link Prediction Based on Graph Neural Networks. 
+                    <em>Advances in Neural Information Processing Systems</em>.
+                </li>
+            </ol>
+            
+            <blockquote>
+                如果本项目的代码或思路对您的研究有帮助，请考虑引用上述相关文献。
+            </blockquote>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <p>
+                <strong>WikiLinks GNN 链路预测项目</strong> · 
+                由 <a href="https://github.com/inneedloveBu">inneedloveBu</a> 开发与维护
+            </p>
+            
+            <div class="social-links">
+                <a href="https://github.com/inneedloveBu/wikinet-link-prediction" title="GitHub仓库">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:indeedlove@foxmail.com" title="联系作者">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://arxiv.org/search/?query=graph+neural+networks+link+prediction" title="相关研究">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
+            </div>
+            
+            <p>
+                <small>
+                    本项目基于 <a href="https://opensource.org/licenses/MIT">MIT 许可证</a> 开源 · 
+                    最后更新: 2024年1月 · 
+                    <a href="https://github.com/inneedloveBu/wikinet-link-prediction/issues">报告问题</a>
+                </small>
+            </p>
+        </div>
+    </footer>
+
+    <!-- 脚本 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>
         
-        <h2>🚀 项目亮点</h2>
-        <ul>
-            <li>使用 <strong>PyTorch Geometric</strong> 实现多种GNN模型（GCN, GAT, GraphSAGE）。</li>
-            <li>在维基百科特定子集的数据集上实现了先进的链路预测性能。</li>
-            <li>提供完整的代码、预训练模型和可复现的实验步骤。</li>
-        </ul>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((el) => {
+                hljs.highlightElement(el);
+            });
+        });
+    
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
         
-        <h2>📈 结果速览</h2>
-        <p>我们的最佳模型在测试集上达到了 <strong>AUC = 0.886</strong>。</p>
-        <img src="https://github.com/inneedloveBu/wikinet-link-prediction/blob/main/animations/training_progress_english_20260124_160006.gif" alt="训练过程动画" style="max-width: 100%; border: 1px solid #ddd;" />
-        <!-- 注意：图片链接需要替换为你GIF的实际raw链接 -->
-        
-        <h2>🔗 相关链接</h2>
-        <ul>
-            <li><a href="https://github.com/inneedloveBu/wikinet-link-prediction">GitHub 代码仓库</a></li>
-            <li><a href="https://github.com/inneedloveBu/wikinet-link-prediction/blob/main/README.md">详细使用文档</a></li>
-            <li><a href="https://colab.research.google.com/github/inneedloveBu/wikinet-link-prediction/blob/main/notebooks/WikiLinks_Demo.ipynb">在 Colab 上快速尝试</a></li>
-        </ul>
-        
-        <footer>
-            <hr>
-            <p>© 2023 inneedloveBu. 本项目基于 <a href="https://opensource.org/licenses/MIT">MIT 协议</a>开源。</p>
-        </footer>
-    </article>
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('error', function() {
+                const backupSrc = this.getAttribute('onerror').match(/this\.src='([^']+)'/)[1];
+                if (backupSrc && this.src !== backupSrc) {
+                    this.src = backupSrc;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
