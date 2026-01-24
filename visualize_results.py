@@ -85,6 +85,7 @@ def visualize_node_embeddings(model, data, num_nodes=1000):
         plt.show()
         
         print(f"可视化 {len(z_2d)} 个节点的嵌入")
+import os 
 
 if __name__ == "__main__":
     # 绘制训练历史

@@ -1,4 +1,9 @@
 # WikiLinks图神经网络链路预测
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-red)
+![License](https://img.shields.io/badge/License-MIT-green)
+![AUC](https://img.shields.io/badge/AUC-0.798-orange)
+
 
 一个基于PyTorch Geometric的图神经网络项目，用于维基百科链接图的链路预测任务。
 
@@ -148,7 +153,34 @@ Fork 本仓库
 
 框架：PyTorch Geometric, NetworkX, scikit-learn
 
-感谢所有开源社区的贡献者
+## 📚 参考文献与致谢
+
+本项目在实现过程中参考或基于以下优秀的研究工作，在此向原作者致谢：
+
+1.  **图卷积网络 (GCN) 的奠基工作**：
+    ```bibtex
+    @article{kipf2016semi,
+      title={Semi-Supervised Classification with Graph Convolutional Networks},
+      author={Kipf, Thomas N. and Welling, Max},
+      journal={arXiv preprint arXiv:1609.02907},
+      year={2016}
+    }
+    ```
+2.  **大规模图表示学习**：
+    ```bibtex
+    @inproceedings{hamilton2017inductive,
+      title={Inductive Representation Learning on Large Graphs},
+      author={Hamilton, Will and Ying, Rex and Leskovec, Jure},
+      booktitle={Advances in Neural Information Processing Systems},
+      pages={1024--1034},
+      year={2017}
+    }
+    ```
+3.  **链路预测的经典方法**（可选，如果你的模型有比较对象）：
+    - Liben-Nowell, D., & Kleinberg, J. (2007). The link-prediction problem for social networks. *Journal of the American Society for Information Science and Technology*.
+
+**如果本项目的代码或思路对您的研究有帮助，请考虑引用上述相关文献。**
+
 
 📞 联系方式
 如有问题或建议，请通过以下方式联系：
