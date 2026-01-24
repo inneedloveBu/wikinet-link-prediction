@@ -35,7 +35,7 @@ wikinet/
 ├── requirements.txt # 依赖包列表
 ├── README.md # 项目说明
 └── .gitignore # Git忽略文件
-
+```
 
 
 ## 🚀 快速开始
@@ -43,10 +43,12 @@ wikinet/
 ### 1. 环境安装
 
 # 克隆项目
+```bash
 git clone https://github.com/inneedloveBu/wikinet-link-prediction.git
 cd wikinet-link-prediction
-
+```
 # 创建虚拟环境（可选）
+```bash
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 # 或
@@ -54,6 +56,7 @@ venv\Scripts\activate     # Windows
 
 # 安装依赖
 pip install -r requirements.txt
+```
 2. 数据准备
 下载WikiLinks数据集：
 
@@ -64,8 +67,8 @@ pip install -r requirements.txt
 将文件放置在 data/raw/ 目录下
 
 3. 运行训练
-bash
-python train11.py
+`python train11.py`
+
 🔬 技术特点
 数据预处理
 连通分量提取：自动提取最大连通分量
@@ -88,9 +91,6 @@ python train11.py
 
 学习率调度：动态调整学习率
 
-📈 实验结果
-训练曲线
-https://models/improved_experiment_results.png
 
 关键指标
 指标	数值	说明
@@ -145,13 +145,13 @@ learning_rate = 0.01    # 学习率
 
 Fork 本仓库
 
-创建功能分支 (git checkout -b feature/AmazingFeature)
+创建功能分支 `git checkout -b feature/AmazingFeature`
 
-提交更改 (git commit -m 'Add some AmazingFeature')
+提交更改 `git commit -m 'Add some AmazingFeature'`
 
-推送到分支 (git push origin feature/AmazingFeature)
+推送到分支 `git push origin feature/AmazingFeature)`
 
-开启 Pull Request
+开启 `Pull Request`
 
 📄 许可证
 本项目采用 MIT 许可证 - 查看 LICENSE 文件了解详情
@@ -184,7 +184,7 @@ Fork 本仓库
       year={2017}
     }
     ```
-3.  **链路预测的经典方法**（可选，如果你的模型有比较对象）：
+3.  **链路预测的经典方法**：
     - Liben-Nowell, D., & Kleinberg, J. (2007). The link-prediction problem for social networks. *Journal of the American Society for Information Science and Technology*.
 
 **如果本项目的代码或思路对您的研究有帮助，请考虑引用上述相关文献。**
