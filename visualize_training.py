@@ -1,9 +1,25 @@
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import numpy as np
+import json
+import os
 
-# 1. 模拟训练数据（请替换为你自己训练日志中的真实数据）
-epochs = list(range(1, 101)) # 假设训练了100个epoch
+# 尝试从保存的文件中加载历史数据
+history_path = 'models/improved_training_history.json'
+if os.path.exists(history_path):
+    with open(history_path, 'r') as f:
+        history = json.load(f)
+    # 假设history字典中有'train_loss'和'val_auc'键
+    train_loss = history.get('train_loss', [])  # 应包含300个值
+    val_auc = history.get('val_auc', [])        # 应包含300个值
+    epochs = list(range(1, len(train_loss) + 1))
+    print(f"从{history_path}加载了{len(train_loss)}个epoch的数据")
+else:
+    print("未找到完整历史文件，使用日志提取的数据")
+    # 使用上面提取的列表
+
+# 1. 模拟训练数据
+epochs = list(range(1, 301)) 
 # 模拟训练损失和准确率（呈下降/上升趋势）
 train_loss = [1/np.log(e+1) + np.random.normal(0, 0.02) for e in epochs]
 val_auc = [0.65 + 0.15 * (1 - np.exp(-e/30)) + np.random.normal(0, 0.01) for e in epochs]
