@@ -4,7 +4,13 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![AUC](https://img.shields.io/badge/AUC-0.7976-orange)
 
+![结果展示](animations/training_progress_chinese_202601241601_final.png)
+![result display](animations/training_progress_english_202601241600_final.png)
+## 📊 实验结果与可视化
+下图展示了模型在训练过程中损失下降和AUC指标上升的趋势：
 
+![训练过程动画（中文）](animations/training_progress_chinese_202601241601_final.gif)
+![training process animation（English）](animations/training_progress_english_202601241600_final.gif)
 一个基于PyTorch Geometric的图神经网络项目，用于维基百科链接图的链路预测任务。
 
 ## 📊 项目概述
