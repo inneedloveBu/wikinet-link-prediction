@@ -11,7 +11,7 @@
 下图展示了模型在训练过程中损失下降和AUC指标上升的趋势：
 <img src="https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_202601241600_final.gif" alt="训练过程动画" style="max-width: 100%; border: 1px solid #ddd;" />
 ![训练过程动画（中文）](./animations/training_progress_chinese_202601241601_final.gif)
-![training process animation（English）](./animations/training_progress_english_202601241600_final.gif)
+![training process animation（English）](https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_202601241600_final.gif)
 
 
 
