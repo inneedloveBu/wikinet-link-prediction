@@ -3,14 +3,15 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-red)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![AUC](https://img.shields.io/badge/AUC-0.7976-orange)
+<img width="1735" height="900" alt="training_progress_chinese_202601241601_final" src="https://github.com/user-attachments/assets/85d2b794-b492-4c60-aea4-2fca9d658d7e" />
+<img width="1735" height="900" alt="training_progress_english_202601241600_final" src="https://github.com/user-attachments/assets/b227e98d-7cb2-43de-920c-4a1a4f3f4dc8" />
 
-![结果展示](animations/training_progress_chinese_202601241601_final.png)
-![result display](animations/training_progress_english_202601241600_final.png)
+
 ## 📊 实验结果与可视化
 下图展示了模型在训练过程中损失下降和AUC指标上升的趋势：
 
-![训练过程动画（中文）](animations/training_progress_chinese_202601241601_final.gif)
-![training process animation（English）](animations/training_progress_english_202601241600_final.gif)
+![训练过程动画（中文）](./animations/training_progress_chinese_202601241601_final.gif)
+![training process animation（English）](./animations/training_progress_english_202601241600_final.gif)
 一个基于PyTorch Geometric的图神经网络项目，用于维基百科链接图的链路预测任务。
 
 ## 📊 项目概述
@@ -24,6 +25,7 @@
 - **准确率**: 0.6964
 
 ## 🏗️ 项目结构
+```bash
 wikinet/
 ├── data/ # 数据目录
 │ ├── raw/ # 原始数据（需自行下载）
@@ -34,12 +36,12 @@ wikinet/
 ├── README.md # 项目说明
 └── .gitignore # Git忽略文件
 
-text
+
 
 ## 🚀 快速开始
 
 ### 1. 环境安装
-```bash
+
 # 克隆项目
 git clone https://github.com/inneedloveBu/wikinet-link-prediction.git
 cd wikinet-link-prediction
