@@ -4,6 +4,11 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![AUC](https://img.shields.io/badge/AUC-0.889-orange)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/inneedloveBu/wikinet-link-prediction/blob/main/notebooks/WikiLinks_Demo.ipynb)
+![PyPI](https://img.shields.io/pypi/v/wikinet-link-prediction)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/wikinet-link-prediction)
+![PyPI - License](https://img.shields.io/pypi/l/wikinet-link-prediction)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/wikinet-link-prediction)
+
 <img width="1735" height="900" alt="training_progress_chinese_202601241601_final" src="https://github.com/user-attachments/assets/85d2b794-b492-4c60-aea4-2fca9d658d7e" />
 <img width="1735" height="900" alt="training_progress_english_202601241600_final" src="https://github.com/user-attachments/assets/b227e98d-7cb2-43de-920c-4a1a4f3f4dc8" />
 
