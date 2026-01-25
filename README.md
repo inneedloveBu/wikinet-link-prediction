@@ -5,7 +5,7 @@
 ![AUC](https://img.shields.io/badge/AUC-0.889-orange)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/inneedloveBu/wikinet-link-prediction/blob/main/notebooks/WikiLinks_Demo.ipynb)
 ![PyPI](https://img.shields.io/pypi/v/wikinet-link-prediction)
-![PyPI - Downloads](https://img.shields.io/pypi/dm/wikinet-link-prediction)
+![PyPI - Downloads](https://pypi.org/project/wikinet-link-prediction/1.0.0/)
 ![PyPI - License](https://img.shields.io/pypi/l/wikinet-link-prediction)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/wikinet-link-prediction)
 
