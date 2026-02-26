@@ -15,10 +15,10 @@
 
 ## 📊 Experimental Results & Visualization  
 The following figure shows the trend of loss decrease and AUC increase during model training:  
-<img src="https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_202601241600_final.gif" alt="Training progress animation" style="max-width: 100%; border: 1px solid #ddd;" />  
-https://github.com/inneedloveBu/wikinet-link-prediction/animations/training_progress_english_202601241600_final.gif  
-![Training progress gif](https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_202601241600_final.gif)  
-<img src="https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_chinese_202601241601_final.gif" width="50%" />
+<img src="https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_20260124_160006.gif" alt="Training progress animation" style="max-width: 100%; border: 1px solid #ddd;" />  
+https://github.com/inneedloveBu/wikinet-link-prediction/animations/training_progress_english_20260124_160006.gif  
+![Training progress gif](https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_20260124_160006.gif)  
+
 
 ### Training Progress Dynamic Display
 
