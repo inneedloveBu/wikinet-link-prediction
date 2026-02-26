@@ -22,9 +22,6 @@ https://github.com/inneedloveBu/wikinet-link-prediction/animations/training_prog
 
 ### Training Progress Dynamic Display
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_20260124_160006_final.png" width="90%" alt="GNN training progress">
-</div>
 
 A graph neural network project based on PyTorch Geometric for link prediction on Wikipedia link graphs.
 
