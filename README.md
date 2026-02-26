@@ -17,13 +17,13 @@
 The following figure shows the trend of loss decrease and AUC increase during model training:  
 <img src="https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_20260124_160006.gif" alt="Training progress animation" style="max-width: 100%; border: 1px solid #ddd;" />  
 https://github.com/inneedloveBu/wikinet-link-prediction/animations/training_progress_english_20260124_160006.gif  
-![Training progress gif](https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_20260124_160006.gif)  
+![Training progress gif](https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_chinese_20260124_160116.gif)  
 
 
 ### Training Progress Dynamic Display
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_202601241600_final.gif" width="90%" alt="GNN training progress">
+  <img src="https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_202601241600_final.png" width="90%" alt="GNN training progress">
 </div>
 
 A graph neural network project based on PyTorch Geometric for link prediction on Wikipedia link graphs.
