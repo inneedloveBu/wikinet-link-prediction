@@ -1,13 +1,16 @@
 # WikiLinks图神经网络链路预测
+[![bilibili](https://img.shields.io/badge/🎥-Video%20on%20Bilibili-yellow)](https://www.bilibili.com/video/BV1j4zkBVEgu/?p=5&share_source=copy_web&vd_source=56cdc7ef44ed1ee2c9b9515febf8e9ce&t=0)
+
+[![githubio](https://img.shields.io/badge/🤗-github.io-blue)](https://inneedlovebu.github.io/wikinet-link-prediction/)
+[![GitHub](https://img.shields.io/badge/📂-GitHub-black)](https://github.com/inneedloveBu/wikinet-link-prediction)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/inneedloveBu/wikinet-link-prediction/blob/main/notebooks/WikiLinks_Demo.ipynb)
+
+
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-red)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![AUC](https://img.shields.io/badge/AUC-0.889-orange)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/inneedloveBu/wikinet-link-prediction/blob/main/notebooks/WikiLinks_Demo.ipynb)
-![PyPI](https://img.shields.io/pypi/v/wikinet-link-prediction)
-![PyPI - Downloads](https://img.shields.io/pypi/dm/wikinet-link-prediction)
-![PyPI - License](https://img.shields.io/pypi/l/wikinet-link-prediction)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/wikinet-link-prediction)
+
 
 <img width="1735" height="900" alt="training_progress_chinese_202601241601_final" src="https://github.com/user-attachments/assets/85d2b794-b492-4c60-aea4-2fca9d658d7e" />
 <img width="1735" height="900" alt="training_progress_english_202601241600_final" src="https://github.com/user-attachments/assets/b227e98d-7cb2-43de-920c-4a1a4f3f4dc8" />
