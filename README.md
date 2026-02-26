@@ -1,5 +1,5 @@
 # WikiLinks图神经网络链路预测
-[![bilibili](https://img.shields.io/badge/🎥-Video%20on%20Bilibili-yellow)](https://www.bilibili.com/video/BV1j4zkBVEgu/?p=5&share_source=copy_web&vd_source=56cdc7ef44ed1ee2c9b9515febf8e9ce&t=0)
+[![bilibili](https://img.shields.io/badge/🎥-Video%20on%20Bilibili-red)](https://www.bilibili.com/video/BV1j4zkBVEgu/?p=5&share_source=copy_web&vd_source=56cdc7ef44ed1ee2c9b9515febf8e9ce&t=0)
 
 [![githubio](https://img.shields.io/badge/🤗-github.io-blue)](https://inneedlovebu.github.io/wikinet-link-prediction/)
 [![GitHub](https://img.shields.io/badge/📂-GitHub-black)](https://github.com/inneedloveBu/wikinet-link-prediction)
@@ -7,7 +7,7 @@
 
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-red)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-yellow)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![AUC](https://img.shields.io/badge/AUC-0.889-orange)
 
