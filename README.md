@@ -1,4 +1,4 @@
-# WikiLinks图神经网络链路预测
+# WikiLinks图神经网络链路预测 WikiLinks Graph Neural Network Link Prediction
 [![bilibili](https://img.shields.io/badge/🎥-Video%20on%20Bilibili-red)](https://www.bilibili.com/video/BV1j4zkBVEgu/?p=5&share_source=copy_web&vd_source=56cdc7ef44ed1ee2c9b9515febf8e9ce&t=0)
 
 [![githubio](https://img.shields.io/badge/🤗-github.io-blue)](https://inneedlovebu.github.io/wikinet-link-prediction/)
@@ -10,10 +10,192 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-yellow)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![AUC](https://img.shields.io/badge/AUC-0.889-orange)
-
-
 <img width="1735" height="900" alt="training_progress_chinese_202601241601_final" src="https://github.com/user-attachments/assets/85d2b794-b492-4c60-aea4-2fca9d658d7e" />
 <img width="1735" height="900" alt="training_progress_english_202601241600_final" src="https://github.com/user-attachments/assets/b227e98d-7cb2-43de-920c-4a1a4f3f4dc8" />
+
+## 📊 Experimental Results & Visualization  
+The following figure shows the trend of loss decrease and AUC increase during model training:  
+<img src="https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_202601241600_final.gif" alt="Training progress animation" style="max-width: 100%; border: 1px solid #ddd;" />  
+https://github.com/inneedloveBu/wikinet-link-prediction/animations/training_progress_english_202601241600_final.gif  
+![Training progress gif](https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_202601241600_final.gif)  
+<img src="https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_chinese_202601241601_final.gif" width="50%" />
+
+### Training Progress Dynamic Display
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_202601241600_final.gif" width="90%" alt="GNN training progress">
+</div>
+
+A graph neural network project based on PyTorch Geometric for link prediction on Wikipedia link graphs.
+
+## 📊 Project Overview
+
+This project implements link prediction on Wikipedia link graphs, using improved graph neural network models and feature engineering methods to achieve significant performance gains.
+
+### Main Results
+- **Test AUC**: 0.7976
+- **Test AP**: 0.7841  
+- **Test F1 Score**: 0.7627
+- **Accuracy**: 0.6964
+
+## 🏗️ Project Structure
+```bash
+wikinet/
+├── data/                    # Data directory
+│   ├── raw/                 # Raw data (to be downloaded)
+│   └── cleaned/             # Cleaned data
+├── models/                  # Model files
+├── train11.py                # Main training script
+├── requirements.txt          # List of dependencies
+├── README.md                 # Project documentation
+└── .gitignore                # Git ignore file
+```
+
+## 🚀 Quick Start
+
+### 1. Environment Setup
+
+```bash
+# Clone the project
+git clone https://github.com/inneedloveBu/wikinet-link-prediction.git
+cd wikinet-link-prediction
+```
+
+```bash
+# Create a virtual environment (optional)
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# or
+venv\Scripts\activate     # Windows
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### 2. Data Preparation
+Download the WikiLinks dataset:
+
+- Visit: https://zenodo.org/record/1193740
+- Download: `enwiki.wikilink_graph.2018-03-01.csv.gz`
+- Place the file in the `data/raw/` directory
+
+### 3. Run Training
+```bash
+python train11.py
+```
+
+## 🔬 Technical Features
+
+### Data Preprocessing
+- **Connected Component Extraction**: Automatically extract the largest connected component
+- **Data Augmentation**: Intelligently add random edges to address sparsity
+- **Feature Engineering**: Combine structural features and content features
+
+### Model Architecture
+- Simplified yet effective model design: 21,729 parameters
+- Multiple feature interaction methods: concatenation, difference, product
+- Regularization strategies: Dropout + BatchNorm
+
+### Training Strategy
+- **Hard Negative Sampling**: Generate negative samples at different difficulty levels
+- **Early Stopping**: Automatically save the best model
+- **Learning Rate Scheduling**: Dynamically adjust learning rate
+
+## Key Metrics
+
+| Metric        | Value  | Description                         |
+|---------------|--------|-------------------------------------|
+| Test AUC      | 0.7976 | Excellent classifier performance   |
+| Test AP       | 0.7841 | Good precision-recall balance      |
+| F1 Score      | 0.7627 | Comprehensive performance metric   |
+| Accuracy      | 0.6964 | Basic classification accuracy      |
+
+### Graph Structure Analysis
+- **Nodes**: 114
+- **Edges**: 700
+- **Edge Density**: 10.87%
+- **Average Degree**: 12.28
+- **Clustering Coefficient**: 0.4368
+
+## 📂 File Description
+
+### Main Scripts
+- **train11.py**: Main training script, includes data loading, feature extraction, model training and evaluation
+
+### Output Files
+- `data/cleaned/`: Cleaned data files
+  - `cleaned_edges.txt`: Cleaned edge data
+  - `cleaned_nodes.txt`: Cleaned node data
+  - `graph_stats.json`: Graph statistics
+- `models/`: Model and result files
+  - `best_improved_model.pt`: Best model weights
+  - `improved_training_history.json`: Training history
+  - `improved_experiment_results.png`: Visualization charts
+
+## 🛠️ Custom Configuration
+You can adjust the experiment by modifying the following parameters:
+
+```python
+# In the main() function of train11.py
+target_nodes = 150      # Target number of nodes
+target_edges = 700      # Target number of edges
+num_epochs = 300        # Number of training epochs
+hidden_dim = 64         # Hidden layer dimension
+learning_rate = 0.01    # Learning rate
+```
+
+## 🤝 Contributing Guide
+Contributions are welcome! Please follow these steps:
+
+1. Fork this repository
+2. Create a feature branch: `git checkout -b feature/AmazingFeature`
+3. Commit your changes: `git commit -m 'Add some AmazingFeature'`
+4. Push to the branch: `git push origin feature/AmazingFeature`
+5. Open a Pull Request
+
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgements
+- Data source: Wikipedia WikiLinks dataset
+- Frameworks: PyTorch Geometric, NetworkX, scikit-learn
+
+## 📚 References & Acknowledgements
+
+This project references or builds upon the following excellent research works during implementation. We thank the original authors:
+
+1. **Foundational work on Graph Convolutional Networks (GCN)**:
+    ```bibtex
+    @article{kipf2016semi,
+      title={Semi-Supervised Classification with Graph Convolutional Networks},
+      author={Kipf, Thomas N. and Welling, Max},
+      journal={arXiv preprint arXiv:1609.02907},
+      year={2016}
+    }
+    ```
+2. **Large-scale graph representation learning**:
+    ```bibtex
+    @inproceedings{hamilton2017inductive,
+      title={Inductive Representation Learning on Large Graphs},
+      author={Hamilton, Will and Ying, Rex and Leskovec, Jure},
+      booktitle={Advances in Neural Information Processing Systems},
+      pages={1024--1034},
+      year={2017}
+    }
+    ```
+3. **Classic methods for link prediction**:
+    - Liben-Nowell, D., & Kleinberg, J. (2007). The link-prediction problem for social networks. *Journal of the American Society for Information Science and Technology*.
+
+**If the code or ideas in this project are helpful for your research, please consider citing the relevant references above.**
+
+## 📞 Contact
+If you have questions or suggestions, please reach out via:
+
+- Project Issues: [https://github.com/inneedoveBu/wikinet-link-prediction/issues](https://github.com/inneedoveBu/wikinet-link-prediction/issues)
+- Email: indeedlove@foxmail.com
+
+⭐ If this project helps you, please give it a Star!
+
 
 
 ## 📊 实验结果与可视化
