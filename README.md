@@ -338,6 +338,154 @@ target_edges = 700      # 目标边数
 num_epochs = 300        # 训练轮数
 hidden_dim = 64         # 隐藏层维度
 learning_rate = 0.01    # 学习率
+
+1️⃣ 数据规模（实验配置）
+
+你有两种规模配置，但当前这一版关键数据为：
+
+节点数：1000
+
+边数：5000
+
+特征维度：5（早期版本）
+
+后续改进版本：结构+内容特征拼接 → 20维
+
+数据划分：
+
+训练边：1771
+
+验证边：253
+
+测试边：507
+
+另一个配置：
+
+训练数据：420条边
+
+验证数据：140条边
+
+测试数据：140条边
+
+2️⃣ 使用的技术栈（确认来自代码）
+
+深度学习框架：
+
+PyTorch 2.0+
+
+图神经网络：
+
+PyTorch Geometric
+
+数据处理：
+
+NumPy
+
+Pandas
+
+NetworkX
+
+评估指标：
+
+ROC-AUC
+
+Average Precision (AP)
+
+F1-score
+
+Accuracy
+
+PR-AUC
+
+实验管理：
+
+JSON日志
+
+TensorBoard（可选）
+
+可视化：
+
+Matplotlib
+
+3️⃣ 模型结构（从代码确认）
+
+最终使用的模型不是简单GCN，而是：
+
+编码器结构（MLP-based node encoder）
+
+Linear → BN → ReLU → Dropout
+
+Linear → BN → ReLU → Dropout
+
+Linear
+
+隐藏维度默认：
+
+hidden_dim = 64
+
+最终 embedding = hidden_dim // 2
+
+边预测方式（不是简单concat）
+
+你做了更高级的 edge interaction：
+
+u
+
+v
+
+|u - v|
+
+u * v
+
+然后 concat 成 4×embedding 维度输入 MLP
+
+这在申请中是非常加分的设计点。
+
+4️⃣ 负采样策略（这是高质量点）
+
+你实现了三种难度负采样：
+
+easy：随机负采样
+
+medium：基于共同邻居
+
+hard：基于度分布相似性
+
+这一点非常加分。
+
+5️⃣ 训练策略
+
+Binary Cross Entropy with logits
+
+class weight 平衡正负样本
+
+Gradient clipping
+
+Early stopping
+
+ReduceLROnPlateau 调度器
+
+最优模型保存
+
+6️⃣ 真实测试结果（你提供）
+
+测试集：
+
+AUC = 0.798
+
+AP = 0.784
+
+F1 = 0.763
+
+Accuracy = 0.696
+
+最佳验证AUC = 0.897 (Epoch 110)
+
+训练轮次 = 300 epochs
+
+参数量 = 21,729
+
+
 🤝 贡献指南
 欢迎贡献！请遵循以下步骤：
 
