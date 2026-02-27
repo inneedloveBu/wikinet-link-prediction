@@ -20,180 +20,182 @@ https://github.com/inneedloveBu/wikinet-link-prediction/animations/training_prog
 ![Training progress gif](https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_chinese_20260124_160116.gif)  
 
 
-### Training Progress Dynamic Display
+# WikiNet: Graph Neural Network for Wikipedia Link Prediction
+## Overview
 
+WikiNet is a graph neural network (GNN) based system designed to predict link existence between Wikipedia pages. The task is formulated as a link prediction problem on a large-scale graph constructed from Wikipedia hyperlink data.
 
-A graph neural network project based on PyTorch Geometric for link prediction on Wikipedia link graphs.
+This project explores structural feature engineering, advanced negative sampling strategies, and robust training mechanisms to improve link prediction performance.
 
-## 📊 Project Overview
+## Dataset
 
-This project implements link prediction on Wikipedia link graphs, using improved graph neural network models and feature engineering methods to achieve significant performance gains.
+The graph is constructed from Wikipedia hyperlink relationships.
 
-### Main Results
-- **Test AUC**: 0.7976
-- **Test AP**: 0.7841  
-- **Test F1 Score**: 0.7627
-- **Accuracy**: 0.6964
+### Experimental configuration:
 
-## 🏗️ Project Structure
-```bash
-wikinet/
-├── data/                    # Data directory
-│   ├── raw/                 # Raw data (to be downloaded)
-│   └── cleaned/             # Cleaned data
-├── models/                  # Model files
-├── train11.py                # Main training script
-├── requirements.txt          # List of dependencies
-├── README.md                 # Project documentation
-└── .gitignore                # Git ignore file
-```
+- **Number of nodes: 1000**
 
-## 🚀 Quick Start
+- **Number of edges: 5000**
 
-### 1. Environment Setup
+- **Node feature dimension: 5 (baseline)**
 
-```bash
-# Clone the project
-git clone https://github.com/inneedloveBu/wikinet-link-prediction.git
-cd wikinet-link-prediction
-```
+- **Enhanced feature dimension: 20 (structural + content features)**
 
-```bash
-# Create a virtual environment (optional)
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# or
-venv\Scripts\activate     # Windows
+### Data split:
 
-# Install dependencies
-pip install -r requirements.txt
-```
+- **Training edges: 1771**
 
-### 2. Data Preparation
-Download the WikiLinks dataset:
+- **Validation edges: 253**
 
-- Visit: https://zenodo.org/record/1193740
-- Download: `enwiki.wikilink_graph.2018-03-01.csv.gz`
-- Place the file in the `data/raw/` directory
+- **Test edges: 507**
 
-### 3. Run Training
-```bash
-python train11.py
-```
+## Feature Engineering
+### Structural Features
 
-## 🔬 Technical Features
+Extracted using NetworkX:
 
-### Data Preprocessing
-- **Connected Component Extraction**: Automatically extract the largest connected component
-- **Data Augmentation**: Intelligently add random edges to address sparsity
-- **Feature Engineering**: Combine structural features and content features
+- **Normalized degree**
 
-### Model Architecture
-- Simplified yet effective model design: 21,729 parameters
-- Multiple feature interaction methods: concatenation, difference, product
-- Regularization strategies: Dropout + BatchNorm
+- **Clustering coefficient**
 
-### Training Strategy
-- **Hard Negative Sampling**: Generate negative samples at different difficulty levels
-- **Early Stopping**: Automatically save the best model
-- **Learning Rate Scheduling**: Dynamically adjust learning rate
+- **Betweenness centrality**
 
-## Key Metrics
+- **PageRank score**
 
-| Metric        | Value  | Description                         |
-|---------------|--------|-------------------------------------|
-| Test AUC      | 0.7976 | Excellent classifier performance   |
-| Test AP       | 0.7841 | Good precision-recall balance      |
-| F1 Score      | 0.7627 | Comprehensive performance metric   |
-| Accuracy      | 0.6964 | Basic classification accuracy      |
+- **Neighbor statistics (mean degree, std, max, min)**
 
-### Graph Structure Analysis
-- **Nodes**: 114
-- **Edges**: 700
-- **Edge Density**: 10.87%
-- **Average Degree**: 12.28
-- **Clustering Coefficient**: 0.4368
+- **High-degree indicator**
 
-## 📂 File Description
+### Content-Based Features
 
-### Main Scripts
-- **train11.py**: Main training script, includes data loading, feature extraction, model training and evaluation
+Derived from node string representations:
 
-### Output Files
-- `data/cleaned/`: Cleaned data files
-  - `cleaned_edges.txt`: Cleaned edge data
-  - `cleaned_nodes.txt`: Cleaned node data
-  - `graph_stats.json`: Graph statistics
-- `models/`: Model and result files
-  - `best_improved_model.pt`: Best model weights
-  - `improved_training_history.json`: Training history
-  - `improved_experiment_results.png`: Visualization charts
+- **Title length**
 
-## 🛠️ Custom Configuration
-You can adjust the experiment by modifying the following parameters:
+- **Numeric token count**
 
-```python
-# In the main() function of train11.py
-target_nodes = 150      # Target number of nodes
-target_edges = 700      # Target number of edges
-num_epochs = 300        # Number of training epochs
-hidden_dim = 64         # Hidden layer dimension
-learning_rate = 0.01    # Learning rate
-```
+- **Uppercase ratio**
 
-## 🤝 Contributing Guide
-Contributions are welcome! Please follow these steps:
+- **Special character ratio**
 
-1. Fork this repository
-2. Create a feature branch: `git checkout -b feature/AmazingFeature`
-3. Commit your changes: `git commit -m 'Add some AmazingFeature'`
-4. Push to the branch: `git push origin feature/AmazingFeature`
-5. Open a Pull Request
+- **Word count**
 
-## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- **Hash-based embedding component**
 
-## 🙏 Acknowledgements
-- Data source: Wikipedia WikiLinks dataset
-- Frameworks: PyTorch Geometric, NetworkX, scikit-learn
+All features are standardized before training.
 
-## 📚 References & Acknowledgements
+Model Architecture
+Node Encoder
 
-This project references or builds upon the following excellent research works during implementation. We thank the original authors:
+A multi-layer perceptron (MLP) is used to encode node features:
 
-1. **Foundational work on Graph Convolutional Networks (GCN)**:
-    ```bibtex
-    @article{kipf2016semi,
-      title={Semi-Supervised Classification with Graph Convolutional Networks},
-      author={Kipf, Thomas N. and Welling, Max},
-      journal={arXiv preprint arXiv:1609.02907},
-      year={2016}
-    }
-    ```
-2. **Large-scale graph representation learning**:
-    ```bibtex
-    @inproceedings{hamilton2017inductive,
-      title={Inductive Representation Learning on Large Graphs},
-      author={Hamilton, Will and Ying, Rex and Leskovec, Jure},
-      booktitle={Advances in Neural Information Processing Systems},
-      pages={1024--1034},
-      year={2017}
-    }
-    ```
-3. **Classic methods for link prediction**:
-    - Liben-Nowell, D., & Kleinberg, J. (2007). The link-prediction problem for social networks. *Journal of the American Society for Information Science and Technology*.
+Linear → BatchNorm → ReLU → Dropout
 
-**If the code or ideas in this project are helpful for your research, please consider citing the relevant references above.**
+Linear → BatchNorm → ReLU → Dropout
 
-## 📞 Contact
-If you have questions or suggestions, please reach out via:
+Linear projection
 
-- Project Issues: [https://github.com/inneedoveBu/wikinet-link-prediction/issues](https://github.com/inneedoveBu/wikinet-link-prediction/issues)
-- Email: indeedlove@foxmail.com
+Hidden dimension: 64
+Total parameters: 21,729
 
-⭐ If this project helps you, please give it a Star!
+Edge Prediction Mechanism
 
+Instead of simple concatenation, the model uses multiple interaction patterns:
 
+Node embedding u
+
+Node embedding v
+
+Absolute difference |u − v|
+
+Element-wise product u * v
+
+These representations are concatenated and passed through an MLP edge predictor.
+
+This design improves representation capacity for link prediction.
+
+Negative Sampling Strategy
+
+Three hardness levels are implemented:
+
+Easy: Random negative sampling
+
+Medium: Common-neighbor-based sampling
+
+Hard: Degree similarity-based sampling
+
+Medium hardness is used in final training to generate more informative negative samples.
+
+Training Strategy
+
+Loss: Binary Cross Entropy with Logits
+
+Class-weight balancing
+
+Gradient clipping
+
+Early stopping (patience=20)
+
+Learning rate scheduler (ReduceLROnPlateau)
+
+Best model checkpointing
+
+Training epochs: 300
+Best validation AUC achieved at epoch 110
+
+Results
+
+Test Set Performance:
+
+ROC-AUC: 0.798
+
+Average Precision (AP): 0.784
+
+F1-score: 0.763
+
+Accuracy: 0.696
+
+Best validation AUC: 0.897
+
+The model demonstrates stable generalization performance on held-out edges.
+
+Tech Stack
+
+PyTorch 2.0+
+
+PyTorch Geometric
+
+NetworkX
+
+NumPy / Pandas
+
+scikit-learn
+
+Matplotlib
+
+Key Contributions
+
+Designed multi-interaction edge decoder
+
+Implemented hardness-controlled negative sampling
+
+Combined structural and content-based node features
+
+Applied early stopping and adaptive LR scheduling
+
+Conducted systematic evaluation using multiple metrics
+
+Future Improvements
+
+Larger-scale graph training
+
+GCN/GAT encoder replacement
+
+Neighbor sampling for scalability
+
+Node embedding visualization
+
+Web deployment with interactive interface
 
 ## 📊 实验结果与可视化
 下图展示了模型在训练过程中损失下降和AUC指标上升的趋势：
