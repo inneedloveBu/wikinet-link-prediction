@@ -84,118 +84,118 @@ Derived from node string representations:
 
 All features are standardized before training.
 
-Model Architecture
-Node Encoder
+## Model Architecture
+### Node Encoder
 
 A multi-layer perceptron (MLP) is used to encode node features:
 
-Linear → BatchNorm → ReLU → Dropout
+- **Linear → BatchNorm → ReLU → Dropout**
 
-Linear → BatchNorm → ReLU → Dropout
+- **Linear → BatchNorm → ReLU → Dropout**
 
-Linear projection
+- **Linear projection**
 
 Hidden dimension: 64
 Total parameters: 21,729
 
-Edge Prediction Mechanism
+## Edge Prediction Mechanism
 
 Instead of simple concatenation, the model uses multiple interaction patterns:
 
-Node embedding u
+- **Node embedding u**
 
-Node embedding v
+- **Node embedding v**
 
-Absolute difference |u − v|
+- **Absolute difference |u − v|**
 
-Element-wise product u * v
+- **Element-wise product u * v**
 
 These representations are concatenated and passed through an MLP edge predictor.
 
 This design improves representation capacity for link prediction.
 
-Negative Sampling Strategy
+## Negative Sampling Strategy
 
 Three hardness levels are implemented:
 
-Easy: Random negative sampling
+- **Easy: Random negative sampling**
 
-Medium: Common-neighbor-based sampling
+- **Medium: Common-neighbor-based sampling**
 
-Hard: Degree similarity-based sampling
+- **Hard: Degree similarity-based sampling**
 
 Medium hardness is used in final training to generate more informative negative samples.
 
-Training Strategy
+## Training Strategy
 
-Loss: Binary Cross Entropy with Logits
+- **Loss: Binary Cross Entropy with Logits**
 
-Class-weight balancing
+- **Class-weight balancing**
 
-Gradient clipping
+- **Gradient clipping**
 
-Early stopping (patience=20)
+- **Early stopping (patience=20)**
 
-Learning rate scheduler (ReduceLROnPlateau)
+- **Learning rate scheduler (ReduceLROnPlateau)**
 
-Best model checkpointing
+- **Best model checkpointing**
 
 Training epochs: 300
 Best validation AUC achieved at epoch 110
 
-Results
+## Results
 
 Test Set Performance:
 
-ROC-AUC: 0.798
+- **ROC-AUC: 0.798**
 
-Average Precision (AP): 0.784
+- **Average Precision (AP): 0.784**
 
-F1-score: 0.763
+- **F1-score: 0.763**
 
-Accuracy: 0.696
+- **Accuracy: 0.696**
 
-Best validation AUC: 0.897
+- **Best validation AUC: 0.897**
 
 The model demonstrates stable generalization performance on held-out edges.
 
-Tech Stack
+## Tech Stack
 
-PyTorch 2.0+
+- **PyTorch 2.0+**
 
-PyTorch Geometric
+- **PyTorch Geometric**
 
-NetworkX
+- **NetworkX**
 
-NumPy / Pandas
+- **NumPy / Pandas**
 
-scikit-learn
+- **scikit-learn**
 
-Matplotlib
+- **Matplotlib**
 
-Key Contributions
+## Key Contributions
 
-Designed multi-interaction edge decoder
+- **Designed multi-interaction edge decoder**
 
-Implemented hardness-controlled negative sampling
+- **Implemented hardness-controlled negative sampling**
 
-Combined structural and content-based node features
+- **Combined structural and content-based node features**
 
-Applied early stopping and adaptive LR scheduling
+- **Applied early stopping and adaptive LR scheduling**
 
-Conducted systematic evaluation using multiple metrics
+- **Conducted systematic evaluation using multiple metrics**
 
-Future Improvements
+## Future Improvements
 
-Larger-scale graph training
+- **Larger-scale graph training**
 
-GCN/GAT encoder replacement
+- **GCN/GAT encoder replacement**
 
-Neighbor sampling for scalability
+- **Neighbor sampling for scalability**
 
-Node embedding visualization
+- **Node embedding visualization**
 
-Web deployment with interactive interface
+- **Web deployment with interactive interface**
 
 ## 📊 实验结果与可视化
 下图展示了模型在训练过程中损失下降和AUC指标上升的趋势：
