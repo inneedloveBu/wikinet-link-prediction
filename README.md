@@ -20,527 +20,255 @@ https://github.com/inneedloveBu/wikinet-link-prediction/animations/training_prog
 ![Training progress gif](https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_chinese_20260124_160116.gif)  
 
 
-# WikiNet: Graph Neural Network for Wikipedia Link Prediction
-## Overview
+下面是按照你要求：
 
-WikiNet is a graph neural network (GNN) based system designed to predict link existence between Wikipedia pages. The task is formulated as a link prediction problem on a large-scale graph constructed from Wikipedia hyperlink data.
+* 一级标题 `#`
+* 二级标题 `##`
+* 三级标题 `###`
+* 所有带点条目统一改为 `- **xxx**` 规范格式
+* 结构完全统一
+* 删除重复版本
+* 数值统一为最终实验版本
+* AUC 统一为 Test AUC 0.798
 
-This project explores structural feature engineering, advanced negative sampling strategies, and robust training mechanisms to improve link prediction performance.
+整理后的**完整终版 README**如下：
 
-## Dataset
+---
 
-The graph is constructed from Wikipedia hyperlink relationships.
+# WikiNet: Hardness-Aware Link Prediction with Graph Neural Networks
 
-### Experimental configuration:
+[![bilibili](https://img.shields.io/badge/🎥-Video%20on%20Bilibili-red)](https://www.bilibili.com/video/BV1j4zkBVEgu/?p=5)
+[![githubio](https://img.shields.io/badge/🤗-github.io-blue)](https://inneedlovebu.github.io/wikinet-link-prediction/)
+[![GitHub](https://img.shields.io/badge/📂-GitHub-black)](https://github.com/inneedloveBu/wikinet-link-prediction)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/inneedloveBu/wikinet-link-prediction/blob/main/notebooks/WikiLinks_Demo.ipynb)
 
-- **Number of nodes: 1000**
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-yellow)
+![License](https://img.shields.io/badge/License-MIT-green)
+![AUC](https://img.shields.io/badge/Test%20AUC-0.798-orange)
 
-- **Number of edges: 5000**
+---
 
-- **Node feature dimension: 5 (baseline)**
+# Overview
 
-- **Enhanced feature dimension: 20 (structural + content features)**
+WikiNet is a graph representation learning project designed to perform link prediction on a Wikipedia hyperlink network.
 
-### Data split:
+The task is formulated as a binary classification problem over node pairs.
 
-- **Training edges: 1771**
+The project focuses on:
 
-- **Validation edges: 253**
+* **Structural feature engineering**
+* **Hardness-aware negative sampling**
+* **Multi-interaction edge decoding**
+* **Robust training stabilization techniques**
 
-- **Test edges: 507**
+---
 
-## Feature Engineering
-### Structural Features
+# Dataset
 
-Extracted using NetworkX:
+The graph is constructed from the WikiLinks dataset.
 
-- **Normalized degree**
+## Experimental Configuration
 
-- **Clustering coefficient**
+* **Number of nodes: 1000**
+* **Number of edges: 5000**
+* **Node feature dimension: 20 (structural + content features)**
 
-- **Betweenness centrality**
+## Data Split
 
-- **PageRank score**
+* **Training edges: 1771**
+* **Validation edges: 253**
+* **Test edges: 507**
 
-- **Neighbor statistics (mean degree, std, max, min)**
+---
 
-- **High-degree indicator**
+# Feature Engineering
 
-### Content-Based Features
+## Structural Features (via NetworkX)
 
-Derived from node string representations:
+* **Normalized degree**
+* **Clustering coefficient**
+* **Betweenness centrality**
+* **PageRank score**
+* **Neighbor statistics (mean / std / max / min degree)**
 
-- **Title length**
+## Content-Based Features
 
-- **Numeric token count**
-
-- **Uppercase ratio**
-
-- **Special character ratio**
-
-- **Word count**
-
-- **Hash-based embedding component**
+* **Title length**
+* **Word count**
+* **Numeric token count**
+* **Uppercase ratio**
+* **Special character ratio**
+* **Hash-based embedding component**
 
 All features are standardized before training.
 
-## Model Architecture
-### Node Encoder
+---
 
-A multi-layer perceptron (MLP) is used to encode node features:
+# Model Architecture
 
-- **Linear → BatchNorm → ReLU → Dropout**
+## Node Encoder
 
-- **Linear → BatchNorm → ReLU → Dropout**
+A 3-layer MLP encoder:
 
-- **Linear projection**
+* **Linear → BatchNorm → ReLU → Dropout**
 
-Hidden dimension: 64
-Total parameters: 21,729
+* **Linear → BatchNorm → ReLU → Dropout**
 
-## Edge Prediction Mechanism
+* **Linear projection layer**
 
-Instead of simple concatenation, the model uses multiple interaction patterns:
+* **Hidden dimension: 64**
 
-- **Node embedding u**
+* **Total trainable parameters: 21,729**
 
-- **Node embedding v**
+---
 
-- **Absolute difference |u − v|**
+# Edge Interaction Mechanism
 
-- **Element-wise product u * v**
+Instead of naive concatenation, the decoder integrates multiple interaction patterns:
 
-These representations are concatenated and passed through an MLP edge predictor.
+* **Node embedding u**
+* **Node embedding v**
+* **Absolute difference |u − v|**
+* **Element-wise product u ⊙ v**
 
-This design improves representation capacity for link prediction.
+These representations are concatenated and passed through an MLP classifier.
 
-## Negative Sampling Strategy
+This design increases expressive power for link prediction tasks.
 
-Three hardness levels are implemented:
+---
 
-- **Easy: Random negative sampling**
+# Hardness-Aware Negative Sampling
 
-- **Medium: Common-neighbor-based sampling**
+Three difficulty levels were implemented:
 
-- **Hard: Degree similarity-based sampling**
+* **Easy — Random negative sampling**
+* **Medium — Common-neighbor-based sampling**
+* **Hard — Degree-similarity-based sampling**
 
-Medium hardness is used in final training to generate more informative negative samples.
+Final training uses:
 
-## Training Strategy
+* **Medium hardness sampling**
 
-- **Loss: Binary Cross Entropy with Logits**
+This generates more informative negative edges and improves generalization.
 
-- **Class-weight balancing**
+---
 
-- **Gradient clipping**
+# Training Strategy
 
-- **Early stopping (patience=20)**
+* **Binary Cross Entropy with logits**
 
-- **Learning rate scheduler (ReduceLROnPlateau)**
+* **Class-weight balancing**
 
-- **Best model checkpointing**
+* **Gradient clipping**
 
-Training epochs: 300
-Best validation AUC achieved at epoch 110
+* **Early stopping (patience = 20)**
 
-## Results
+* **ReduceLROnPlateau learning rate scheduler**
 
-Test Set Performance:
+* **Best model checkpointing**
 
-- **ROC-AUC: 0.798**
+* **Training epochs: 300**
 
-- **Average Precision (AP): 0.784**
+* **Best validation AUC: 0.897 (epoch 110)**
 
-- **F1-score: 0.763**
+---
 
-- **Accuracy: 0.696**
+# Results
 
-- **Best validation AUC: 0.897**
+## Test Set Performance
 
-The model demonstrates stable generalization performance on held-out edges.
+* **ROC-AUC: 0.798**
+* **Average Precision (AP): 0.784**
+* **F1-score: 0.763**
+* **Accuracy: 0.696**
 
-## Tech Stack
+The model demonstrates stable generalization performance under controlled negative sampling.
 
-- **PyTorch 2.0+**
+---
 
-- **PyTorch Geometric**
+# Technical Stack
 
-- **NetworkX**
+* **PyTorch 2.0+**
+* **PyTorch Geometric**
+* **NetworkX**
+* **NumPy**
+* **Pandas**
+* **scikit-learn**
+* **Matplotlib**
 
-- **NumPy / Pandas**
+---
 
-- **scikit-learn**
+# Project Structure
 
-- **Matplotlib**
-
-## Key Contributions
-
-- **Designed multi-interaction edge decoder**
-
-- **Implemented hardness-controlled negative sampling**
-
-- **Combined structural and content-based node features**
-
-- **Applied early stopping and adaptive LR scheduling**
-
-- **Conducted systematic evaluation using multiple metrics**
-
-## Future Improvements
-
-- **Larger-scale graph training**
-
-- **GCN/GAT encoder replacement**
-
-- **Neighbor sampling for scalability**
-
-- **Node embedding visualization**
-
-- **Web deployment with interactive interface**
-
-## 📊 实验结果与可视化
-下图展示了模型在训练过程中损失下降和AUC指标上升的趋势：
-<img src="https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_202601241600_final.gif" alt="训练过程动画" style="max-width: 100%; border: 1px solid #ddd;" />
-https://github.com/inneedloveBu/wikinet-link-prediction/animations/training_progress_english_202601241600_final.gif
-![训练进度动图](https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_202601241600_final.gif)
-<img src="https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_chinese_202601241601_final.gif" width="50%" />
-
-### 训练过程动态展示
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_english_202601241600_final.gif" width="90%" alt="GNN训练进度">
-</div>
-
-一个基于PyTorch Geometric的图神经网络项目，用于维基百科链接图的链路预测任务。
-
-## 📊 项目概述
-
-本项目实现了对维基百科链接图的链路预测，使用改进的图神经网络模型和特征工程方法，取得了显著的效果提升。
-
-### 主要成果
-- **测试集AUC**: 0.7976
-- **测试集AP**: 0.7841  
-- **测试集F1分数**: 0.7627
-- **准确率**: 0.6964
-
-## 🏗️ 项目结构
 ```bash
-wikinet/
-├── data/ # 数据目录
-│ ├── raw/ # 原始数据（需自行下载）
-│ └── cleaned/ # 清洗后的数据
-├── models/ # 模型文件
-├── train11.py # 主训练脚本
-├── requirements.txt # 依赖包列表
-├── README.md # 项目说明
-└── .gitignore # Git忽略文件
+wikinet-link-prediction/
+├── data/
+│   ├── raw/
+│   └── cleaned/
+├── models/
+├── notebooks/
+├── train11.py
+├── requirements.txt
+└── README.md
 ```
 
+---
 
-## 🚀 快速开始
+# Quick Start
 
-### 1. 环境安装
+## 1. Clone Repository
 
-# 克隆项目
 ```bash
 git clone https://github.com/inneedloveBu/wikinet-link-prediction.git
 cd wikinet-link-prediction
 ```
-# 创建虚拟环境（可选）
-```bash
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# 或
-venv\Scripts\activate     # Windows
 
-# 安装依赖
+## 2. Install Dependencies
+
+```bash
 pip install -r requirements.txt
 ```
-2. 数据准备
-下载WikiLinks数据集：
 
-访问：https://zenodo.org/record/1193740
+## 3. Run Training
 
-下载 enwiki.wikilink_graph.2018-03-01.csv.gz
+```bash
+python train11.py
+```
 
-将文件放置在 data/raw/ 目录下
+---
 
-3. 运行训练
-`python train11.py`
+# Key Contributions
 
-🔬 技术特点
-数据预处理
-连通分量提取：自动提取最大连通分量
+* **Designed hardness-controlled negative sampling mechanism**
+* **Implemented multi-interaction edge decoder**
+* **Combined structural and lightweight content features**
+* **Applied full training stabilization pipeline**
+* **Conducted systematic multi-metric evaluation**
 
-数据增强：智能添加随机边以解决稀疏问题
+---
 
-特征工程：结合结构特征和内容特征
+# Future Improvements
 
-模型架构
-简化但有效的模型设计：21,729个参数
+* **Replace MLP encoder with GCN / GAT**
+* **Neighbor sampling for scalability**
+* **Larger-scale graph experiments**
+* **Embedding visualization**
+* **Interactive web deployment**
 
-多种特征交互方式：拼接、差值、乘积
+---
 
-正则化策略：Dropout + BatchNorm
+# License
 
-训练策略
-困难负采样：按不同难度级别生成负样本
+* **MIT License**
 
-早停机制：自动保存最佳模型
+---
 
-学习率调度：动态调整学习率
+# Contact
 
+* **GitHub Issues:** [https://github.com/inneedloveBu/wikinet-link-prediction/issues](https://github.com/inneedloveBu/wikinet-link-prediction/issues)
+* **Email:** [indeedlove@foxmail.com](mailto:indeedlove@foxmail.com)
 
-关键指标
-指标	数值	说明
-测试集AUC	0.7976	分类器性能优秀
-测试集AP	0.7841	精度-召回平衡良好
-F1分数	0.7627	综合性能指标
-准确率	0.6964	基础分类准确度
-图结构分析
-节点数: 114
+---
 
-边数: 700
 
-边密度: 10.87%
-
-平均度: 12.28
-
-聚类系数: 0.4368
-
-📂 文件说明
-主要脚本
-train11.py：主训练脚本，包含数据加载、特征提取、模型训练和评估
-
-输出文件
-data/cleaned/：清洗后的数据文件
-
-cleaned_edges.txt：清洗后的边数据
-
-cleaned_nodes.txt：清洗后的节点数据
-
-graph_stats.json：图统计信息
-
-models/：模型和结果文件
-
-best_improved_model.pt：最佳模型权重
-
-improved_training_history.json：训练历史
-
-improved_experiment_results.png：可视化图表
-
-🛠️ 自定义配置
-你可以通过修改以下参数来调整实验：
-
-python
-# 在train11.py的main()函数中修改
-target_nodes = 150      # 目标节点数
-target_edges = 700      # 目标边数
-num_epochs = 300        # 训练轮数
-hidden_dim = 64         # 隐藏层维度
-learning_rate = 0.01    # 学习率
-
-1️⃣ 数据规模（实验配置）
-
-你有两种规模配置，但当前这一版关键数据为：
-
-节点数：1000
-
-边数：5000
-
-特征维度：5（早期版本）
-
-后续改进版本：结构+内容特征拼接 → 20维
-
-数据划分：
-
-训练边：1771
-
-验证边：253
-
-测试边：507
-
-另一个配置：
-
-训练数据：420条边
-
-验证数据：140条边
-
-测试数据：140条边
-
-2️⃣ 使用的技术栈
-
-深度学习框架：
-
-PyTorch 2.0+
-
-图神经网络：
-
-PyTorch Geometric
-
-数据处理：
-
-NumPy
-
-Pandas
-
-NetworkX
-
-评估指标：
-
-ROC-AUC
-
-Average Precision (AP)
-
-F1-score
-
-Accuracy
-
-PR-AUC
-
-实验管理：
-
-JSON日志
-
-TensorBoard（可选）
-
-可视化：
-
-Matplotlib
-
-3️⃣ 模型结构
-
-最终使用的模型不是简单GCN，而是：
-
-编码器结构（MLP-based node encoder）
-
-Linear → BN → ReLU → Dropout
-
-Linear → BN → ReLU → Dropout
-
-Linear
-
-隐藏维度默认：
-
-hidden_dim = 64
-
-最终 embedding = hidden_dim // 2
-
-边预测方式（不是简单concat）
-
-你做了更高级的 edge interaction：
-
-u
-
-v
-
-|u - v|
-
-u * v
-
-然后 concat 成 4×embedding 维度输入 MLP
-
-这在申请中是非常加分的设计点。
-
-4️⃣ 负采样策略！！！
-
-你实现了三种难度负采样：
-
-easy：随机负采样
-
-medium：基于共同邻居
-
-hard：基于度分布相似性
-
-这一点非常加分。
-
-5️⃣ 训练策略
-
-Binary Cross Entropy with logits
-
-class weight 平衡正负样本
-
-Gradient clipping
-
-Early stopping
-
-ReduceLROnPlateau 调度器
-
-最优模型保存
-
-6️⃣ 真实测试结果
-
-测试集：
-
-AUC = 0.798
-
-AP = 0.784
-
-F1 = 0.763
-
-Accuracy = 0.696
-
-最佳验证AUC = 0.897 (Epoch 110)
-
-训练轮次 = 300 epochs
-
-参数量 = 21,729
-
-
-🤝 贡献指南
-欢迎贡献！请遵循以下步骤：
-
-Fork 本仓库
-
-创建功能分支 `git checkout -b feature/AmazingFeature`
-
-提交更改 `git commit -m 'Add some AmazingFeature'`
-
-推送到分支 `git push origin feature/AmazingFeature)`
-
-开启 `Pull Request`
-
-📄 许可证
-本项目采用 MIT 许可证 - 查看 LICENSE 文件了解详情
-
-🙏 致谢
-数据来源：维基百科WikiLinks数据集
-
-框架：PyTorch Geometric, NetworkX, scikit-learn
-
-## 📚 参考文献与致谢
-
-本项目在实现过程中参考或基于以下优秀的研究工作，在此向原作者致谢：
-
-1.  **图卷积网络 (GCN) 的奠基工作**：
-    ```bibtex
-    @article{kipf2016semi,
-      title={Semi-Supervised Classification with Graph Convolutional Networks},
-      author={Kipf, Thomas N. and Welling, Max},
-      journal={arXiv preprint arXiv:1609.02907},
-      year={2016}
-    }
-    ```
-2.  **大规模图表示学习**：
-    ```bibtex
-    @inproceedings{hamilton2017inductive,
-      title={Inductive Representation Learning on Large Graphs},
-      author={Hamilton, Will and Ying, Rex and Leskovec, Jure},
-      booktitle={Advances in Neural Information Processing Systems},
-      pages={1024--1034},
-      year={2017}
-    }
-    ```
-3.  **链路预测的经典方法**：
-    - Liben-Nowell, D., & Kleinberg, J. (2007). The link-prediction problem for social networks. *Journal of the American Society for Information Science and Technology*.
-
-**如果本项目的代码或思路对您的研究有帮助，请考虑引用上述相关文献。**
-
-
-📞 联系方式
-如有问题或建议，请通过以下方式联系：
-
-项目issue：https://github.com/inneedoveBu/wikinet-link-prediction/issues
-
-邮件：indeedlove@foxmail.com
-
-⭐ 如果这个项目对你有帮助，请给个Star！
