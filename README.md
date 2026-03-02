@@ -20,20 +20,7 @@ https://github.com/inneedloveBu/wikinet-link-prediction/animations/training_prog
 ![Training progress gif](https://raw.githubusercontent.com/inneedloveBu/wikinet-link-prediction/main/animations/training_progress_chinese_20260124_160116.gif)  
 
 
-下面是按照你要求：
 
-* 一级标题 `#`
-* 二级标题 `##`
-* 三级标题 `###`
-* 所有带点条目统一改为 `- **xxx**` 规范格式
-* 结构完全统一
-* 删除重复版本
-* 数值统一为最终实验版本
-* AUC 统一为 Test AUC 0.798
-
-整理后的**完整终版 README**如下：
-
----
 
 # WikiNet: Hardness-Aware Link Prediction with Graph Neural Networks
 
